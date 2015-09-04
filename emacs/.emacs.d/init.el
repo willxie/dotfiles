@@ -9,6 +9,40 @@
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 
+;; Setup for emacs-mac-port
+(when (equal system-type 'darwin)
+  (setq mac-option-modifier 'meta)
+  (setq mac-command-modifier 'hyper))
+;; Keybonds
+(global-set-key [(hyper q)] 'save-buffers-kill-terminal)
+(global-set-key [(hyper a)] 'mark-whole-buffer)
+(global-set-key [(hyper v)] 'yank)
+(global-set-key [(hyper c)] 'kill-ring-save)
+(global-set-key [(hyper s)] 'save-buffer)
+(global-set-key [(hyper l)] 'goto-line)
+(global-set-key [(hyper w)]
+                (lambda () (interactive) (delete-window)))
+(global-set-key [(hyper z)] 'undo)
+
+;; mac switch meta key
+;; (defun mac-switch-meta nil
+;;   "switch meta between Option and Command"
+;;   (interactive)
+;;   (if (eq mac-option-modifier nil)
+;;       (progn
+;;         (setq mac-option-modifier nil)
+;;         (setq mac-command-modifier 'meta)
+;;         )
+;;     (progn
+;;       (setq mac-option-modifier 'meta)
+;;       (setq mac-command-modifier 'hyper)
+;;       )
+;;     )
+;;     )
+
+;; Start the emacsserver that listens to emacsclient
+;; (server-start)
+
 ;; Stop that noob stuff at startup
 (setq inhibit-startup-message t)
 (menu-bar-mode -1)
@@ -77,7 +111,7 @@
 ;; Scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
-(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse    
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
 ;; Highlight variables
@@ -103,13 +137,13 @@
 ;; ===========================================================================
 ;;                               CMAKE MODE
 ;; ===========================================================================
- 
+
 (setq auto-mode-alist
       (append
        '(("CMakeLists\\.txt\\'" . cmake-mode))
        '(("\\.cmake\\'" . cmake-mode))
        auto-mode-alist))
- 
+
 ;(autoload 'cmake-mode cmake-mode-dir t)
 
 ;; Hippie expand
@@ -120,9 +154,7 @@
 (require 'highlight-parentheses)
 (electric-pair-mode 1)
 
-;; ---------------------------------------------------------------------------
 ;; Flx-ido
-;; ---------------------------------------------------------------------------
 (require 'flx-ido)
 (ido-mode 1)
 (ido-everywhere 1)
@@ -136,9 +168,33 @@
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
 ;; Redo+
-;; ---------------------------------------------------------------------------
 (require 'redo+)
 (global-set-key (kbd "M-_") 'redo)
 
 ;; Open .h files in C++ mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+;; Make paragraph navigation predictable
+(defun xah-forward-block (&optional φn)
+;;   "Move cursor forward to the beginning of next text block.
+;; A text block is separated by blank lines.
+;; In most major modes, this is similar to `forward-paragraph', but this command's behavior is the same regardless of syntax table."
+  (interactive "p")
+  (let ((φn (if (null φn) 1 φn)))
+    (search-forward-regexp "\n[\t\n ]*\n+" nil "NOERROR" φn)))
+
+(defun xah-backward-block (&optional φn)
+;;   "Move cursor backward to previous text block.
+;; See: `xah-forward-block'"
+  (interactive "p")
+  (let ((φn (if (null φn) 1 φn))
+        (ξi 1))
+    (while (<= ξi φn)
+      (if (search-backward-regexp "\n[\t\n ]*\n+" nil "NOERROR")
+          (progn (skip-chars-backward "\n\t "))
+        (progn (goto-char (point-min))
+               (setq ξi φn)))
+      (setq ξi (1+ ξi)))))
+
+(global-set-key (kbd "<C-up>") 'xah-backward-block)
+(global-set-key (kbd "<C-down>") 'xah-forward-block)
