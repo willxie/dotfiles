@@ -107,9 +107,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # ROS
-source /opt/ros/hydro/setup.bash
+export ROS_DISTRO=indigo
+source /opt/ros/$ROS_DISTRO/setup.bash
 source ~/catkin_ws/devel/setup.bash
 
-
 export EDITOR='emacs -nw'
-alias emacs='emacs -nw'
+# alias emacs='emacs -nw'
+
+alias make='make -j8'
+
+# Caps lock to Control
+setxkbmap -layout us -option ctrl:nocaps
