@@ -1,411 +1,500 @@
+git status
+git add cv.bib IEEEtran.cls 
 ll
-emacs
-ll
-cd /Volumes/Will/Documents 
-ls -al
-cd ~
-open .
-ll
-cd /Volumes/Will/elisp 
-ll
-ls -al
-cd ~
-open .
-cd ~
-ll
-ls -al
-cd -
-cd /Volumes/Will/elisp 
-cd ..
-ll
-ls -al
-gcc
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-wget
-brew install wget
-wget
-ll /usr/local
-ls -al /usr/local
-ls
-pwd
-ls -al
-brew tap railwaycat/emacsmacport
-$ brew install emacs-mac
-brew install emacs-mac
-emacs
-which emacs
-emacsemacs-mac
-  /usr/local/Cellar/emacs-mac/emacs-24.5-z-mac-5.8
-  /usr/local/Cellar/emacs-mac/emacs-24.5-z-mac-5.8/Emacs.app/
-open   /usr/local/Cellar/emacs-mac/emacs-24.5-z-mac-5.8/Emacs.app/
-brew info emacs-mac | grep -A1 "was installed to:" | tail -1
-ln -s   /usr/local/Cellar/emacs-mac/emacs-24.5-z-mac-5.8
-man ls
-man ln
-cd   /usr/local/Cellar/emacs-mac/emacs-24.5-z-mac-5.8
-ll
-ls -al
-ls ..
-man brew
-brew linkapp
-brew linkapps
-ll
-ll
-open ~
-defaults write .GlobalPreferences com.apple.mouse.scaling -1
-  /usr/local/Cellar/emacs-mac/emacs-24.5-z-mac-5.8
-  /usr/local/Cellar/emacs-mac/emacs-24.5-z-mac-5.8
-diskutil cs list
-diskutil cs revert disk1
-diskutil cs revert disk1
-diskutil cs list
-diskutil cs list - | grep lvUUID
-diskutil coreStorage revert 6805822A-5D08-4781-AD64-AAE13132D734
-disk util list
-diskutil list
-diskutil corestorage list
-diskutil corestorage
-ls
-ls
-ll
-ls -l
-ls -al
-emacs .emacs.d/init.el
-emacs
-emacs .emacs.d/init.el
-cd .emacs.d/
-ll
-ls -al
-rm init.el*
-ll
-ls -al
-cd ..
-ll
-ls -al
-cd dotfiles/
-ll
-ll
-ls -al
-mkdir emacs
-cd emacs/
-ll
-ls -al
-ls -al
-ls ..
-mv ../elisp .
-ll
-ls -al
-ls -al
-ls ~
-ls -al ~
-mkdir .emacs.d
-ls -al
-cd ~
-ll
-ls -al
-ls .emacs.d/
-rm -r .emacs.d/
-ll
-ls -al
-ls -al
-man ln
-ln -s dotfiles/emacs/.emacs.d/ .emacs.d
-ls -al
-emacs ~/.bash_profile
-emacs ~/.bashrc
-. ~/bashrc
-. ~/.bashrc
-ll
-emacs ~/.bashrc
-ll
-fg
-rm .bashrc~ 
-emacs
-cd dotfiles/emacs/.emacs.d/
-ll
-touch init.el
-open .
-ll
-cd elisp/
-ll
-touch highlight-parentheses.el
-touch flx.el
-touch flx-ido.el
-touch redo.el
-updatedb
-locate
-cd /Users/wxie/dotfiles 
-git init
-git add emacs/
-git commit -a -m "Init commit"
-git remote add origin git@github.com:willxie/dotfiles.git
-git remote -
+git status
+git add cv.bib IEEEtran.cls 
+git status
+git commit -am "Added current cv"
+git status
+git commit -am "Added courses"
+git remote
 git remote -v
-git push origin master
-ls -al ~/.ssh/
-ssh-keygen -t rsa -b 4096 -C "williamgxie"
-ssh-keygen -t rsa -b 4096 -C "williamgxie@gmail.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-pbcopy < ~/.ssh/id_rsa.pub
-ll
-git remote -v
-git push origin master
-cd ~
-ll
-mkdir torrentll
-emacs .ssh
-ll
-mv torrentll/ Torrent
-cd Library/Preferences
-cd ../Application\ Support/
-ll
-rm -r MPlayerX/
-which python
-python -V
-python3 -V
-ll
-cd dotfiles/
-ll
-makdir bash
-mkdir bash
-ll
-ll ~
-emacs ~/.bashrc
-pwd
-cd bash
-cp ~/.bashrc .
-cp ~/.bash_profile .
-ll
-ll
-. ~/.bashrc
-ll
-ll
+git remote add origin git@github.com:willxie/cv.git
+man git push
+git push -u origin master
 cd ..
 ll
-git add bash
-git commit -a -m "added bash"
-git log
-man git
-git config --glaball user.email "williamgxie@gmail.com"
-git config --global user.email "williamgxie@gmail.com"
+man ln
+ln -s cv
+ln -s cv ~/Documents/Resume/tex
+ll ~/Documents/Resume/tex
+ll ~/Documents/Resume/tex
+ln -s cv ~/Documents/Resume/tex
+ln -s ~/git/cv/ ~/Documents/Resume/tex
+ln -sf ~/git/cv/ ~/Documents/Resume/tex
+cd cv
+xelatex cv
 ll
-    git commit --amend --reset-author
-git log
-pdflatex
-which pdflatex
-pdflatex
-exit
-pdflatex
-cd /Users/wxie/Documents/Resume 
-git clone https://github.com/deedydas/Deedy-Resume.git
-emacs
-cd tex/
-ll
-pdflatex cv_12.tex 
-xelatex
-xelatex cv_12.tex
-cd ..
-mkdir test
-cd test
-git clone https://github.com/TannerFilip/resume.git
-ll
-cd resume/
-ll
-xelatex cv_12.tex
-open .
-open .
-open .
-xelatex cv_12.tex
-xelatex cv_12.tex
-emacs ~/.emacs.d/init.el 
-ll
-cd /Users/wxie/Documents/Resume/test/resume 
-ll
-xelatex cv_12.tex 
-xelatex cv_12.tex 
-opendiff /Users/wxie/Documents/Resume/test/resume/deedy-resume_bak.cls /Users/wxie/Documents/Resume/test/resume/deedy-resume.cls 
-/Library/Developer/CommandLineTools/usr/bin/otool 
-diff /Users/wxie/Documents/Resume/test/resume/deedy-resume_bak.cls /Users/wxie/Documents/Resume/test/resume/deedy-resume.cls 
-cd /Users/wxie/Documents/Resume/Deedy-Resume/MacFonts 
-xelatex cv_12.tex 
-xelatex cv_12.tex 
-bibtex
-make
-cd ../../tex/
-ll
-xelatex cv_12.tex 
 pwd
-ll
-xelatex cv_12.tex 
-xelatex cv_12.tex 
-pdflatex cv_12.tex 
-xelatex cv_12.tex 
-xelatex cv_12.tex 
-xelatex cv_12.tex 
-emacs ~/.emacs.d/init.el 
-emacs ~/.emacs.d/init.el 
-fg
-emacs ~/.emacs.d/init.el 
-ll
-emacs ~/.emacs.d/init.el 
-ll
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-emacs ~/.emacs.d/init.el 
-firefox
-l
-ll
-ll
-ll
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-jobs
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-fg
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-xelatex cv.tex 
-ll
-cd /Users/wxie/Desktop/segbot_arm 
-git clone git@github.com:utexas-bwi/segbot_arm.git
 open .
-cd segbot_arm/segbot_arm_perception/
+touch arcane.html
+emacsmq projects.html 
+emacsmp projects.html 
 ll
-git rm -r pcd
-git rm -r feature*
-rm -r scripts
-git commit -a -m " Removed and backuped data and script files from the language grounding project. I'll upload to the dropbox folder Priyanka and I shares. closes #2 \n\n@PriyankaKhante@maxsvetlik"
+rm arcane.html 
+cp snake.html arcane.html
+git status
+git add arcane arcane.html 
+git commit -am "Added ARCANE page"
 git push
+git status
+git commit -am "Fixed image size"
+git push
+git status
+git commt -am "Edited music composition page"
+git commit -am "Edited music composition page"
+git status
+git commit -am "Minor change to sound"
+git push
+cd /Volumes/Store/svn/MRSL-Papers/Drafts-Current 
+grep "william" -r .
+cd /Volumes/Store/svn/MRSL-Papers/Drafts-Current/2014-10-01-ICRA-ManipulationControllers 
+grep "xie" -r
+grep "xie" -r .
+cd ~/Documents/testing/
+ll
+touch run_length_encoding.cpp
+emacsmq run_length_encoding.cpp 
+emacsmp run_length_encoding.cpp 
+pwd
 ll
 ll
-emacs ~/.bashrc
-/Applications/Emacs.app/Contents/MacOS/bin/emacsclient
-fg
-fg
-ll
-ec cv.tex
-. ~/.bashrc
-ec cv.tex
-fg
-emacsmp cv.tex
-fg
-fg
-fg
-ll
-ll
-open .
+open cv.tex
 open cv.pdf 
-ll
-xelatex cv.tex
-make
-xelatex cv.tex
-xelatex cv.tex
-xelatex cv.tex
-open. 
+xelatex
+xelatex cv
+open cv.pdf 
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
 open .
-touch cv.bib
-emacsmq cv.bib 
-emacsmp cv.bib 
-xelatex cv.tex
-bibtex cv.tex
+open .
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+open .
+open .
+xelatex cv
+xelatex cv
 bibtex cv
-ll
-xelatex cv.tex
-xelatex cv.tex
-ll
-git status
-xelatex cv.tex
-xelatex cv.tex
-xelatex cv.tex
-ping google.com
-ping google.com
-ping google.com
-ping google.com
-ping google.com
-cd ~/git/
-ll
-git clone https://github.com/willxie/willxie.github.io
+xelatex cv
+xelatex cv
 open .
-ll
-ll
-cd willxie.github.io/
-git status
-git rm --cached .DS_Store 
-git status
-git commit -a -m "edited home page" 
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+xelatex cv
+git commit -am "Changed font and added language learning. Now the resume is pretty geared toward research"
 git push
-ll ~/.ssh
-pbcopy < ~/.ssh/id_rsa.pub
-git push
-git push
-git push
-git push
-ll
-ll
-open .
-ll
-emacsmp publications.html 
-git commit -a -m "added new ppaper in pub page"
-git push
-git commit -a -m "tried linking html on client side. Didn't work. Given up."
-git push
-git commit -a -m "Updated composition page, still need to title each though"
-git push
-git status
-git add papers/centroid.pdf 
-git commit -m "Added paper pdf"
-git push
-git status
-ll
-git status
-git commit -a -m "updated homepage"
-git push
-cd /Users/wxie/git 
-man git
-git clone --bare https://github.com/utaustinvilla/robotics.git
-ll
-cd robotics.git/
-ll
-man git
-cd /Users/wxie/git 
-ll
-cd ..
-ll
+xelatex cv
+open cv.pdf 
 pwd
 ll
-mkdir svm
-rm -r svm
+..
+dt -h
+dt
+open .
+emacsmq cv.tex
+emacsmp cv.tex 
+pwd
+df -h
+emacsmp cv.tex 
+xelatex cv
+emacsmp cv.tex
+xelatex cv
+open .
+opne.
+open .
+open .
+git status
+git commit -am "Updated resume"
+git push
+open .
+cd /Users/wxie/git 
+git clone git@github.com:utexas-bwi/bwi_experimental.git
+open .
+find . -name "image_capture*"
+find . -name "README*"
+ll
+ll
+git clone git@github.com:willxie/GeneParmesan.git
+ll
+open GeneParmesan/
+git checkout -b motion origin/motion
+git branch -a
+ll
+cd GeneParmesan/
+git checkout -b motion origin/motion
+git branch -a
+cd /Users/wxie/Downloads/opendetex 
+cat README 
+emacsmp -nw
+emacs
+ll
+ll
+make
+cat README 
+cat INSTALL 
+brew install flex
+brew install flex
+cd /Users/wxie/git/willxie.github.io/
+git commit -am "Fixed typo"
+git push
+git push
 cd -
-man svm
-man svn
-svn pull svn.rice.edu/r/Capstone/2013/ARCANE
-svn help
-svn co svn.rice.edu/r/Capstone/2013/ARCANE
-svn co svn.rice.edu/r/Capstone/2013/ARCANE .
-svn co https://svn.rice.edu/r/Capstone/2013/ARCANE .
-svn co https://svn.rice.edu/r/Capstone/2013/ARCANE .
+make
+ll
+make clean
+make
+l
+delatex pwd
+pwd
+ll
+/Library/TeX/texbin
+cp detex /Library/TeX/texbin/
+cp delatex /Library/TeX/texbin/
+detex
+brew update
+brew update
+echo $whoami
+chown /usr/local
+ll /usr/local
+brew doctor
+ll ~/local
+echo $USER
+sudo chown $(USER):admin /usr/local
+sudo chown $(USER):admin /usr/local
+echo $(USER):admin /usr/local
+echo $USER:admin /usr/local
+sudo chown $USER:admin /usr/local
+brew update
+echo $(whoami)
+sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
+brew doctor
+sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
+brew doctor
+brew link --overwrite ghostscript
+brew prune
+brew doctor
+brew update
+exit
+cd ~/Library/Mail/V2/MailData
+ll
+ll
+ll ..
+ll ../..
+cd ../../V3/
+ll
+ll Mailboxes/
+cd MailData/
+ll
+ll -h
+rm Envelope\ Index*
+ll
+/Users/wxie/Downloads/opendetex
+/Users/wxie/Downloads/opendetex/delatex
+/Users/wxie/Downloads/opendetex/delatex cv.tex
+/Users/wxie/Downloads/opendetex/delatex cv.tex > cv.txt
+open .
+echo $PATH
+ll /Library/TeX/texbin
+cd /Library/TeX/texbin
+ll
+pwd
+cd /Users/wxie/git/GeneParmesan 
+ll
+git add kalman.cpp 
+git status
+git push -am "Added kalman filter. Not integrated"
+git commit -am "Added kalman filter. Not integrated"
+git push
+gcc
+man gcc
+clang
+emacs
+brew install Eigen
+brew update
+brew doctor
+brew update
+fg
+man eigen
+man Eigen
+eigen
+ldconfig -p
+ldconfig
+cd /usr
+ll
+cd local/include/
+ll
+echo $CPLUS_INCLUDE_PATH
+echo $LD_LIBRARY_PATH
+cd ~/git
+l
+cd GeneParmesan/
+ll
+git status
+git pull class master
+cd /Users/wxie/Documents/testing 
+ll
+g++
+rm kalman.m 
+ll
+g++ kalman brew tap homebrew/versions
+brew tap homebrew/versions
+brew options gcc
+brew install gcc
+gcc
+man gcc
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+xcode-select --install
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+clear
+clear
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+man gcc
+which gcc
+which gcc | ll
+man
+which gcc
+ll /usr/bin/gcc
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+./kalman 
+g++ -Wall -Werror -Wextra kalman.cpp -o kalman
+./kalman 
+emacs ~/.emacs
+emacs ~/.emacs.d/init.el 
+emacs ~/.emacs.d/init.el 
+emacs ~/.emacs.d/init.el 
+emacs ~/.emacs.d/init.el 
+ll
+cd ~/git/GeneParmesan/
+git pull
+ocd /Users/wxie/git/GeneParmesan /Users/wxie/git/GeneParmesan cd /Users/wxie/git/GeneParmesan 
+cd /Users/wxie/git/GeneParmesan 
+ll
+git pull
+cd core/localization/
+emacsmp KalmanFilter.h 
+emacsmp KalmanFilter.h 
+emacsmp KalmanFilter.h 
+git status
+git commit -am "Added documentation for KalmanFilter.h"
+git push
+cd /Users/wxie/Documents/Application\ Essays/Gradschool\ 2013 
+find . -name "*.tex"
+latex sop.tex 
+latex /Users/wxie/Documents/Application\ Essays/Gradschool\ 2015/sop.tex 
+latex /Users/wxie/Documents/Application\ Essays/Gradschool\ 2015/sop.tex cd ../Gradschool\ 2015
+cd /Users/wxie/Documents/Application\ Essays/Gradschool\ 2015/sop.tex cd ../Gradschool\ 2015
+latex /Users/wxie/Documents/Application\ Essays/Gradschool\ 2015/sop.tex cd ../Gradschool\ 2015
+cd /Users/wxie/Documents/Application\ Essays/Gradschool\ 2015/sop.tex cd ../Gradschool\ 2015
+cd /Users/wxie/Documents/Application\ Essays/Gradschool\ 2015/
+latex /Users/wxie/Documents/Application\ Essays/Gradschool\ 2015/sop.tex cd ../Gradschool\ 2015
+pdflatex sop
+rm -r /Users/wxie/Library/Caches/store*
+rm -r /Users/wxie/Library/Caches/store*
+man ln
+man ln
+cd PASCAL Visual Object Classes 
+ll
+cd /Users/wxie/Dropbox/
+ln -s ~/Documents/ .
+pwd
+ln -s Documents /Users/wxie/Documents/
+ll Documents/
+ll
+ll | grep documents
+ll | grep Documents/
+ll | grep Documents
+ln -s Documents /Users/wxie/Documents/
+ls /Users/wxie/Documents/Documents 
+ls -l /Users/wxie/Documents/Documents 
+ln -s /Users/wxie/Documents Documents
+cd /Users/wxie/Documents/Application\ Essays/NSF\ GRFP/
+latex research_statement
+latex research_statement
+open research_statement.pages 
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+cd ~/Downloads/
+pdflatex proposal_template
+pdflatex proposal_template
+cd ~/git/cv/
+ll
+xelatex cv
+open cv.pdf
+ll
+ll
+cd /Users/wxie/Documents/Application\ Essays/NSF\ GRFP/
+ll
+pdflatex research_statement
+bibtex research_statement
+pdflatex research_statement
+bibtex research_statement
+pdflatex research_statement
+pdflatex research_statement
+x
+pdflatex research_statement
+x
+bibtex research_statement
+pdflatex research_statement
+pdflatex research_statement
+bibtex research_statement
+pdflatex research_statement
+pdflatex research_statement
+bibtex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+bibtex research_statement
+pdflatex research_statement
+bibtex research_statement
+pdflatex research_statement
+pdflatex research_statement
+bibtex research_statement
+bibtex research_statement
+pdflatex research_statement
+pdflatex research_statement
+bibtex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+bibtex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+bibtex research_statement
+pdflatex research_statement
+pdflatex research_statement
+bibtex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+bibtex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+pdflatex research_statement
+ll
+ll
+xelatex /Users/wxie/git/cv/cv
+ll
+ll
+pdflatex research_statement
+cd /Users/wxie/Documents/Application\ Essays/NSF\ GRFP/
+ll
+emacs research_statement.tex

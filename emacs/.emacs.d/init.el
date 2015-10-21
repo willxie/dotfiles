@@ -13,6 +13,10 @@
 (when (equal system-type 'darwin)
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'hyper))
+
+;; Font
+;; (set-frame-font "Monaco 12")
+
 ;; Keybonds
 (global-set-key [(hyper q)] 'save-buffers-kill-terminal)
 (global-set-key [(hyper a)] 'mark-whole-buffer)
@@ -174,6 +178,7 @@
 ;; Open .h files in C++ mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
+
 ;; Make paragraph navigation predictable
 (defun xah-forward-block (&optional φn)
 ;;   "Move cursor forward to the beginning of next text block.
@@ -196,5 +201,5 @@
                (setq ξi φn)))
       (setq ξi (1+ ξi)))))
 
-(global-set-key (kbd "<C-up>") 'xah-backward-block)
-(global-set-key (kbd "<C-down>") 'xah-forward-block)
+;; (global-set-key (kbd "<C-up>") 'xah-backward-block)
+;; (global-set-key (kbd "<C-down>") 'xah-forward-block)
