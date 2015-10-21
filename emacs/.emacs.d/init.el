@@ -177,6 +177,7 @@
 
 ;; Open .h files in C++ mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.launch\\'" . nxml-mode))
 
 
 ;; Make paragraph navigation predictable
