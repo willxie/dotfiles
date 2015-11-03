@@ -14,6 +14,8 @@
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'hyper))
 
+
+
 ;; Font
 ;; (set-frame-font "Monaco 12")
 
@@ -74,7 +76,7 @@
 (load-file "~/.emacs.d/elisp/color-theme-railscasts.el")
 (color-theme-railscasts)
 
-;; "y" and "n" instead of "yes or no"
+;; "Y" and "n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Centralize backup files
@@ -87,15 +89,15 @@
 (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
 
 ;; Window manipulation
-(global-set-key (kbd "M-3") 'split-window-horizontally)
-(global-set-key (kbd "M-2") 'split-window-vertically)
-(global-set-key (kbd "M-1") 'delete-other-windows)
-(global-set-key (kbd "M-0") 'delete-window)
-(global-set-key (kbd "M-o") 'other-window)
-(global-set-key (kbd "M-[") 'shrink-window-horizontally)
-(global-set-key (kbd "M-]") 'enlarge-window-horizontally)
-(global-set-key (kbd "M--") 'shrink-window)
-(global-set-key (kbd "M-=") 'enlarge-window)
+;; (global-set-key (kbd "M-3") 'split-window-horizontally)
+;; (global-set-key (kbd "M-2") 'split-window-vertically)
+;; (global-set-key (kbd "M-1") 'delete-other-windows)
+;; (global-set-key (kbd "M-0") 'delete-window)
+;; (global-set-key (kbd "M-o") 'other-window)
+;; (global-set-key (kbd "M-[") 'shrink-window-horizontally)
+;; (global-set-key (kbd "M-]") 'enlarge-window-horizontally)
+;; (global-set-key (kbd "M--") 'shrink-window)
+;; (global-set-key (kbd "M-=") 'enlarge-window)
 
 ;; Block cursor
 (setq-default cursor-type 'box)
@@ -156,7 +158,7 @@
 
 ;; Highlight and pair parentheses
 (require 'highlight-parentheses)
-(electric-pair-mode 1)
+;; (electric-pair-mode 1)
 
 ;; Flx-ido
 (require 'flx-ido)
@@ -204,3 +206,8 @@
 
 ;; (global-set-key (kbd "<C-up>") 'xah-backward-block)
 ;; (global-set-key (kbd "<C-down>") 'xah-forward-block)
+
+(define-key input-decode-map "\e[1;5A" [C-up])
+(define-key input-decode-map "\e[1;5B" [C-down])
+(define-key input-decode-map "\e[1;5C" [C-right])
+(define-key input-decode-map "\e[1;5D" [C-left])

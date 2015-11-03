@@ -118,3 +118,5 @@ alias make='make -j8'
 
 # Caps lock to Control
 setxkbmap -layout us -option ctrl:nocaps
+
+TERM=xterm-vt220
