@@ -1,0 +1,7 @@
+[user]
+	email = wxie@cs.utexas.edu
+	name = William Xie
+[core]
+	editor = emacs
+[push]
+	default = simple
