@@ -204,3 +204,6 @@
 
 ;; (global-set-key (kbd "<C-up>") 'xah-backward-block)
 ;; (global-set-key (kbd "<C-down>") 'xah-forward-block)
+
+;; Read Google protobuf file type
+(require 'protobuf-mode)
