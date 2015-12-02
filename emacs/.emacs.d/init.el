@@ -14,7 +14,8 @@
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'hyper))
 
-
+;; ELECTRIC PAAAAAAIIR
+(electric-pair-mode 1)
 
 ;; Font
 ;; (set-frame-font "Monaco 12")
@@ -214,3 +215,6 @@
 (define-key input-decode-map "\e[1;5B" [C-down])
 (define-key input-decode-map "\e[1;5C" [C-right])
 (define-key input-decode-map "\e[1;5D" [C-left])
+
+;; Make tab always indent first
+(setq tab-always-indent 'complete)
