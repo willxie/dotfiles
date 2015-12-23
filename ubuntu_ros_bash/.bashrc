@@ -120,3 +120,6 @@ TERM=xterm-vt220
 
 # Python
 alias py='python'
+
+# Caffe
+export PYTHONPATH='/home/users/wxie/caffe/python/'
