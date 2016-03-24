@@ -106,13 +106,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# ROS
-export ROS_DISTRO=indigo
-source /opt/ros/$ROS_DISTRO/setup.bash
-source ~/catkin_ws/devel/setup.bash
-
-export EDITOR='emacs -nw'
-
 # Caps lock to Control
 setxkbmap -layout us -option ctrl:nocaps
 
@@ -122,4 +115,11 @@ TERM=xterm-vt220
 alias py='python'
 
 # Caffe
-export PYTHONPATH='/home/users/wxie/caffe/python/'
+export PYTHONPATH=$PYTHONPATH:'/home/users/wxie/caffe/python/'
+
+# ROS
+export ROS_DISTRO=indigo
+source /opt/ros/indigo/setup.bash
+source ~/catkin_ws/devel/setup.bash
+
+export EDITOR='emacs -nw'
