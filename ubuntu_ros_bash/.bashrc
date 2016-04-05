@@ -123,3 +123,11 @@ alias py='python'
 
 # Caffe
 export PYTHONPATH='/home/users/wxie/caffe/python/'
+
+export PATH=$PATH:'/usr/local/cuda-7.5/include'
+export PATH=$PATH:'/usr/local/cuda/bin'
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:'/usr/local/cuda-7.5/include'
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
+#export PATH=$PATH:/home/users/wxie/anaconda2/bin
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/users/wxie/anaconda2/lib:
