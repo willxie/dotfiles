@@ -45,7 +45,8 @@ set ruler
 " Always display the status line, even if only one window is displayed
 set laststatus=2 
 
-
+" Railcast theme
+colorscheme railscasts
 
 
 
