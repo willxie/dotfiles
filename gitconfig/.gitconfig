@@ -2,6 +2,6 @@
 	email = wxie@cs.utexas.edu
 	name = William Xie
 [core]
-	editor = emacs
+	editor = vim
 [push]
 	default = simple

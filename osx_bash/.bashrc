@@ -10,3 +10,6 @@ alias ec='/usr/local/Cellar/emacs-mac/emacs-24.5-z-mac-5.8/Emacs.app/Contents/Ma
 # Mac
 alias gcc='gcc-5'
 alias g++='g++-5'
+
+# Python
+alias py='python'
