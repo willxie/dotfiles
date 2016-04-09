@@ -45,6 +45,14 @@ set ruler
 " Always display the status line, even if only one window is displayed
 set laststatus=2 
 
+
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
 " Railcast theme
 colorscheme railscasts
 
