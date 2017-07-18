@@ -228,15 +228,15 @@
 ;; Make tab always indent first
 (setq tab-always-indent 'complete)
 
-;; Comment and copy
+;; Comment and copy to replace regular comment
 (defun comment-and-copy-region (beg end &optional arg)
   "Duplicate the region and comment-out the copied text.
 See `comment-region' for behavior of a prefix arg."
   (interactive "r\nP")
   (copy-region-as-kill beg end)
   (goto-char end)
-  (yank)
   (comment-region beg end arg))
+(global-set-key (kbd "M-;") 'comment-and-copy-region)
 
 ;; Save session
 (desktop-save-mode 1)
