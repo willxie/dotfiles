@@ -237,3 +237,21 @@ See `comment-region' for behavior of a prefix arg."
   (goto-char end)
   (yank)
   (comment-region beg end arg))
+
+;; Save session
+(desktop-save-mode 1)
+
+;; Markdown config
+(custom-set-variables
+ '(markdown-command "/usr/local/bin/pandoc"))
+(autoload 'gfm-mode "markdown-mode"
+   "Major mode for editing GitHub Flavored Markdown files" t)
+(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+
+;;change default browser for 'browse-url' to w3m
+;; (setq browse-url-browser-function 'w3m-browse-url)
+;; (autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+;; (setq w3m-use-cookies t)
+
+;; Typeover highlighted words
+(delete-selection-mode 1)
