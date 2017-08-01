@@ -30,10 +30,10 @@
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'hyper))
 
-
+;;===================================================================
 
 ;; ELECTRIC PAIIR
-(electric-pair-mode 1)
+;; (electric-pair-mode 1)
 
 ;; Keybonds
 (global-set-key [(hyper q)] 'save-buffers-kill-terminal)
@@ -93,7 +93,7 @@
 (setq backup-directory-alist
           `((".*" . "~/.emacs.d/backup/")))
     (setq auto-save-file-name-transforms
-          `((".*" "~/.emacs.d/backup." t)))
+          `((".*" "~/.emacs.d/backup/" t)))
 
 ;; Delete trailing whitespace
 (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
@@ -200,7 +200,8 @@ See `comment-region' for behavior of a prefix arg."
   (copy-region-as-kill beg end)
   (goto-char end)
   (comment-region beg end arg))
-(global-set-key (kbd "M-;") 'comment-and-copy-region)
+;; (global-set-key (kbd "M-;") 'comment-and-copy-region)
+
 
 ;; Save session
 (desktop-save-mode 1)
@@ -220,8 +221,8 @@ See `comment-region' for behavior of a prefix arg."
 (delete-selection-mode 1)
 
 ;; Railscast theme
-(use-package color-theme
-  :ensure t)
+;; (use-package color-theme
+;;   :ensure t)
 (use-package railscasts-theme
   :ensure t
   :init
@@ -249,3 +250,10 @@ See `comment-region' for behavior of a prefix arg."
   (ido-everywhere 1)
   (flx-ido-mode 1)
 )
+
+(use-package smartparens-config
+    :ensure smartparens
+    :config
+    (progn
+      (show-smartparens-global-mode t))
+    (smartparens-mode t))
