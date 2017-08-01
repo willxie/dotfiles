@@ -234,7 +234,8 @@ See `comment-region' for behavior of a prefix arg."
 ;; Redo+
 (use-package redo+
   :ensure t
-  :bind ("M-_" . redo))
+  :config
+  (global-set-key (kbd "M-_") 'redo))
 
 ;; Fuzzy match
 (use-package flx-ido
