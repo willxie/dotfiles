@@ -16,9 +16,8 @@
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
 
 (package-initialize)
-;; (add-to-list 'load-path "~/.emacs.d/elisp/")
 
-;; Use use package to install other packages
+;; Use use-package to install other packages
 (if (not (package-installed-p 'use-package))
     (progn
       (package-refresh-contents)
@@ -33,7 +32,7 @@
 ;;===================================================================
 
 ;; ELECTRIC PAIIR
-;; (electric-pair-mode 1)
+(electric-pair-mode 1)
 
 ;; Keybonds
 (global-set-key [(hyper q)] 'save-buffers-kill-terminal)
@@ -202,16 +201,32 @@ See `comment-region' for behavior of a prefix arg."
   (comment-region beg end arg))
 ;; (global-set-key (kbd "M-;") 'comment-and-copy-region)
 
-
 ;; Save session
 (desktop-save-mode 1)
 
 ;; Markdown config
 (custom-set-variables
- '(markdown-command "/usr/local/bin/pandoc"))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(markdown-command "/usr/local/bin/pandoc")
+ '(package-selected-packages
+   (quote
+    (clang-format-buffer smartparens flx-ido redo+ highlight-parentheses railscasts-theme use-package))))
 (autoload 'gfm-mode "markdown-mode"
    "Major mode for editing GitHub Flavored Markdown files" t)
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; Roslaunch highlighting
+(add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
 
 ;;===================================================================
 ;; Packages
@@ -251,9 +266,15 @@ See `comment-region' for behavior of a prefix arg."
   (flx-ido-mode 1)
 )
 
-(use-package smartparens-config
-    :ensure smartparens
-    :config
-    (progn
-      (show-smartparens-global-mode t))
-    (smartparens-mode t))
+;; (use-package smartparens-config
+;;     :ensure smartparens
+;;     :config
+;;     (progn
+;;       (show-smartparens-global-mode t))
+;;     (smartparens-mode t))
+
+(use-package clang-format-buffer
+  :ensure t
+  :config
+  (global-set-key (kbd "C-i") 'redo))
+'
