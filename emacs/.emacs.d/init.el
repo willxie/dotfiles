@@ -277,4 +277,3 @@ See `comment-region' for behavior of a prefix arg."
   :ensure t
   :config
   (global-set-key (kbd "C-i") 'redo))
-'
