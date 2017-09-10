@@ -84,15 +84,18 @@
 (line-number-mode 1)
 (column-number-mode 1)
 
-
 ;; "Y" and "n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; Centralize backup files
-(setq backup-directory-alist
-          `((".*" . "~/.emacs.d/backup/")))
-    (setq auto-save-file-name-transforms
-          `((".*" "~/.emacs.d/backup/" t)))
+;; Centralize backuisownp files
+(setq
+   backup-by-copying t      ; don't clobber symlinks
+   backup-directory-alist
+    '(("." . "~/.emacs.d/backup"))    ; don't litter my fs tree
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)       ; use versioned backups
 
 ;; Delete trailing whitespace
 (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
@@ -213,7 +216,7 @@ See `comment-region' for behavior of a prefix arg."
  '(markdown-command "/usr/local/bin/pandoc")
  '(package-selected-packages
    (quote
-    (clang-format-buffer smartparens flx-ido redo+ highlight-parentheses railscasts-theme use-package))))
+    (clang-format clang-format-buffer smartparens flx-ido redo+ highlight-parentheses railscasts-theme use-package))))
 (autoload 'gfm-mode "markdown-mode"
    "Major mode for editing GitHub Flavored Markdown files" t)
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
@@ -225,15 +228,18 @@ See `comment-region' for behavior of a prefix arg."
  ;; If there is more than one, they won't work right.
  )
 
+;; Typeover highlighted words
+(delete-selection-mode 1)
+
 ;; Roslaunch highlighting
 (add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
+
+;; Show function name
+(which-function-mode 1)
 
 ;;===================================================================
 ;; Packages
 ;;====================================================================
-
-;; Typeover highlighted words
-(delete-selection-mode 1)
 
 ;; Railscast theme
 ;; (use-package color-theme
@@ -273,7 +279,15 @@ See `comment-region' for behavior of a prefix arg."
 ;;       (show-smartparens-global-mode t))
 ;;     (smartparens-mode t))
 
-(use-package clang-format-buffer
+(use-package clang-format
   :ensure t
   :config
-  (global-set-key (kbd "C-i") 'redo))
+  (global-set-key (kbd "C-c i") 'clang-format-region)
+  (global-set-key (kbd "C-c u") 'clang-format-buffer)
+  (defun clang-format-before-save ()
+    (add-hook 'before-save-hook 'clang-format-before-save)
+    (interactive)
+    (when (eq major-mode 'c++-mode) (clang-format-buffer)))
+  ;; Install hook to use clang-format on save
+  (add-hook 'before-save-hook 'clang-format-before-save)
+)
