@@ -216,7 +216,7 @@ See `comment-region' for behavior of a prefix arg."
  '(markdown-command "/usr/local/bin/pandoc")
  '(package-selected-packages
    (quote
-    (clang-format clang-format-buffer smartparens flx-ido redo+ highlight-parentheses railscasts-theme use-package))))
+    (cython-mode jedi py-autopep8 protobuf-mode cmake-mode clang-format clang-format-buffer smartparens flx-ido redo+ highlight-parentheses railscasts-theme use-package))))
 (autoload 'gfm-mode "markdown-mode"
    "Major mode for editing GitHub Flavored Markdown files" t)
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
@@ -272,13 +272,7 @@ See `comment-region' for behavior of a prefix arg."
   (flx-ido-mode 1)
 )
 
-;; (use-package smartparens-config
-;;     :ensure smartparens
-;;     :config
-;;     (progn
-;;       (show-smartparens-global-mode t))
-;;     (smartparens-mode t))
-
+;; Auto C++ clang format on save
 (use-package clang-format
   :ensure t
   :config
@@ -291,3 +285,26 @@ See `comment-region' for behavior of a prefix arg."
   ;; Install hook to use clang-format on save
   (add-hook 'before-save-hook 'clang-format-before-save)
 )
+
+;; Auto Python pep8 on save
+(use-package py-autopep8
+  :ensure t
+  :config
+  (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+  )
+
+;; Protobuf mode
+(use-package protobuf-mode
+  :ensure t)
+
+;; Python auto-complete
+(use-package jedi
+  :ensure t
+  :config
+  (add-hook 'python-mode-hook 'jedi:setup)
+  (setq jedi:complete-on-dot t)
+  )
+
+;; Cython
+(use-package cython-mode
+  :ensure t)
