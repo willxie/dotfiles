@@ -1,12 +1,12 @@
 [user]
-	email = wxie@cs.utexas.edu
-	name = William Xie
+        name = Will Xie
+        email = will.xie@getcruise.com
 [core]
-	editor = vim
+        editor = vim
 [push]
-	default = simple
+        default = simple
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
