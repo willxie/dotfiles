@@ -30,6 +30,11 @@
   (setq mac-command-modifier 'hyper))
 
 ;;===================================================================
+;; Stop that noob stuff at startup
+(if window-system
+(setq inhibit-startup-message t)
+(menu-bar-mode -1)
+(tool-bar-mode -1))
 
 ;; ELECTRIC PAIIR
 (electric-pair-mode 1)
@@ -60,12 +65,6 @@
 ;;       )
 ;;     )
 ;;     )
-
-
-;; Stop that noob stuff at startup
-(setq inhibit-startup-message t)
-(menu-bar-mode -1)
-(tool-bar-mode -1)
 
 
 ;; Tab = 4 spaces
@@ -240,7 +239,6 @@ See `comment-region' for behavior of a prefix arg."
 ;; Set font
 (set-default-font "DejaVu Sans Mono-11")
 
-
 ;; Caffe prototxt
 (setq caffe-mode-highlights
       '((".*\s{" . font-lock-function-name-face)
@@ -262,6 +260,10 @@ See `comment-region' for behavior of a prefix arg."
   "Kill all other buffers."
   (interactive)
   (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
+
+;; Easier navigation
+(global-set-key (kbd "M-n") 'forward-paragraph)
+(global-set-key (kbd "M-p") 'backward-paragraph)
 
 ;;===================================================================
 ;; Packages
