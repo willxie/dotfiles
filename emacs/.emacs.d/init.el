@@ -216,7 +216,7 @@ See `comment-region' for behavior of a prefix arg."
  '(markdown-command "/usr/local/bin/pandoc")
  '(package-selected-packages
    (quote
-    (cython-mode jedi py-autopep8 protobuf-mode cmake-mode clang-format clang-format-buffer smartparens flx-ido redo+ highlight-parentheses railscasts-theme use-package))))
+    (yaml-mode highlight-indent-guides highlight-indentation-guides highlight-indentation cython-mode jedi py-autopep8 protobuf-mode cmake-mode clang-format clang-format-buffer smartparens flx-ido redo+ highlight-parentheses railscasts-theme use-package))))
 (autoload 'gfm-mode "markdown-mode"
    "Major mode for editing GitHub Flavored Markdown files" t)
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
@@ -236,6 +236,32 @@ See `comment-region' for behavior of a prefix arg."
 
 ;; Show function name
 (which-function-mode 1)
+
+;; Set font
+(set-default-font "DejaVu Sans Mono-11")
+
+
+;; Caffe prototxt
+(setq caffe-mode-highlights
+      '((".*\s{" . font-lock-function-name-face)
+        ("^\s*.+:" . font-lock-keyword-face)
+        ("#+.*" . font-lock-comment-face)
+        ("'.*'" . font-lock-string-face)
+        ("[A-z]" . font-lock-constant-face)
+        ("false\\|true" . font-lock-constant-face)
+        ("[0-9.e]+" . font-lock-constant-face)
+        ))
+(define-derived-mode caffe-mode fundamental-mode
+  (setq font-lock-defaults '(caffe-mode-highlights))
+  (setq mode-name "Caffe"))
+(add-to-list 'auto-mode-alist '("\\.prototxt\\'" . caffe-mode))
+
+
+;; Kill other buffers
+(defun kill-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
 
 ;;===================================================================
 ;; Packages
@@ -308,3 +334,18 @@ See `comment-region' for behavior of a prefix arg."
 ;; Cython
 (use-package cython-mode
   :ensure t)
+
+;; Indentation highlight
+(use-package highlight-indent-guides
+  :ensure t
+  :config
+  (setq highlight-indent-guides-method 'character)
+  (add-hook 'python-mode-hook 'highlight-indent-guides-mode)
+ )
+
+;; Yaml
+(use-package yaml-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+)
