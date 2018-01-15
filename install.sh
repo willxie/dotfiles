@@ -3,7 +3,8 @@
 # Variables
 DOT_DIR=~/dotfiles
 OLD_DOT_DIR=~/dotfiles_old
-MODULES="emacs tmux gitconfig vim profile"
+# "emacs tmux gitconfig vim profile"
+MODULES=""
 
 ############# Script #############
 # Add arguments to MODULES
