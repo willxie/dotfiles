@@ -11,13 +11,20 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
-;; (when (< emacs-major-version 24)
-;;   ;; For important compatibility libraries like cl-lib
-;;   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
+(when (< emacs-major-version 24)
+   ;; For important compatibility libraries like cl-lib
+   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
 
 (package-initialize)
 
-(straight-use-package 'use-package)
+;;(straight-use-package 'use-package)
+
+;; Use use-package to install other packages
+(if (not (package-installed-p 'use-package))
+    (progn
+      (package-refresh-contents)
+      (package-install 'use-package)))
+(require 'use-package)
 
 ;; Setup for emacs-mac-port
 (when (equal system-type 'darwin)
