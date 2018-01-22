@@ -51,10 +51,10 @@ alias jnb='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
 alias py='python'
 
 # Google cloud
-export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/application_default_credentials.json
+# export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/application_default_credentials.json
+export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539ed1f38bb6.json
 
 # Emacs
-alias e='emacs'
 ec() { emacsclient "$@" &! }
 
 # Nautilus without annoying desktop

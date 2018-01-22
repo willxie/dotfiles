@@ -228,6 +228,9 @@ See `comment-region' for behavior of a prefix arg."
 ;; Roslaunch highlighting
 (add-to-list 'auto-mode-alist '("\\.launch$" . xml-mode))
 
+;; Bazel BUILD syntax highlighting
+(add-to-list 'auto-mode-alist '("\\BUILD$" . python-mode))
+
 ;; Show function name
 (which-function-mode 1)
 
