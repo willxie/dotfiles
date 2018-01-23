@@ -30,9 +30,7 @@
 # More colors
 export TERM="xterm-256color"
 
-# CAFFE and cruise stuff
-export PYTHONPATH=/home/wxie/fcn.berkeleyvision.org:$PYTHONPATH
-export PYTHONPATH=/opt/ros/cruise/vendor/python:$PYTHONPATH
+# Extra python paths
 export PYTHONPATH=~/minerva:$PYTHONPATH
 
 # Minerva
@@ -56,6 +54,13 @@ export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539
 
 # Emacs
 ec() { emacsclient "$@" &! }
+
+# Mkdir and then cd to it
+mkdircd ()
+{
+    mkdir -p -- "$1" &&
+        cd -P -- "$1"
+}
 
 # Nautilus without annoying desktop
 alias N='nautilus --no-desktop&'
