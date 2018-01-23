@@ -12,10 +12,12 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
 (when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
+   ;; For important compatibility libraries like cl-lib
+   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
 
 (package-initialize)
+
+;;(straight-use-package 'use-package)
 
 ;; Use use-package to install other packages
 (if (not (package-installed-p 'use-package))
@@ -240,7 +242,7 @@ See `comment-region' for behavior of a prefix arg."
 (which-function-mode 1)
 
 ;; Set font
-(set-default-font "DejaVu Sans Mono-11")
+;; (set-default-font "DejaVu Sans Mono-11")
 
 ;; Caffe prototxt
 (setq caffe-mode-highlights
