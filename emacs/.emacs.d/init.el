@@ -286,12 +286,6 @@ See `comment-region' for behavior of a prefix arg."
 (use-package highlight-parentheses
   :ensure t)
 
-;; Redo+
-(use-package redo+
-  :ensure t
-  :config
-  (global-set-key (kbd "M-_") 'redo))
-
 ;; Fuzzy match
 (use-package flx-ido
   :ensure t
@@ -331,12 +325,12 @@ See `comment-region' for behavior of a prefix arg."
   :ensure t)
 
 ;; Python auto-complete
-(use-package jedi
-  :ensure t
-  :config
-  (add-hook 'python-mode-hook 'jedi:setup)
-  (setq jedi:complete-on-dot t)
-  )
+;; (use-package jedi
+;;   :ensure t
+;;   :config
+;;   (add-hook 'python-mode-hook 'jedi:setup)
+;;   (setq jedi:complete-on-dot t)
+;;   )
 
 ;; Cython
 (use-package cython-mode
@@ -356,3 +350,7 @@ See `comment-region' for behavior of a prefix arg."
   :config
   (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 )
+
+(use-package undo-tree
+  :init
+  (global-undo-tree-mode))
