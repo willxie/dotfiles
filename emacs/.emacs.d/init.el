@@ -17,8 +17,6 @@
 
 (package-initialize)
 
-;;(straight-use-package 'use-package)
-
 ;; Use use-package to install other packages
 (if (not (package-installed-p 'use-package))
     (progn
@@ -75,15 +73,25 @@
 	      tab-width 4
 	      indent-tabs-mode nil)
 
+;; Better indentation
+(c-add-style "cruise"
+             '("linux"
+               (indent-tabs-mode . nil)
+               (c-basic-offset . 4)
+               (c-offsets-alist
+                (innamespace . 0))))
+(setq c-default-style "cruise")
+
+
 ;; Syntax highlighting
 (global-font-lock-mode 1)
 
 ;; Line number
-(global-linum-mode 1)
+;; (global-linum-mode 1)
 
 ;; Display column and line numbers
-(line-number-mode 1)
-(column-number-mode 1)
+;; (line-number-mode 1)
+;; (column-number-mode 1)
 
 ;; "Y" and "n" instead of "yes or no"
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -207,6 +215,8 @@ See `comment-region' for behavior of a prefix arg."
 
 ;; Save session
 (desktop-save-mode 1)
+(desktop-read)
+
 
 ;; Markdown config
 (custom-set-variables
@@ -351,6 +361,7 @@ See `comment-region' for behavior of a prefix arg."
   (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 )
 
+;; Allow redo
 (use-package undo-tree
   :init
   (global-undo-tree-mode))
