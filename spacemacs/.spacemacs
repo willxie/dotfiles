@@ -316,10 +316,10 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (blink-cursor-mode 1)
   (custom-set-variables '(helm-buffers-fuzzy-matching t))
-  (setq evil-want-fine-undo t) 
+  (setq evil-want-fine-undo t)
   ;; Make linums relative by default
   (global-linum-mode 1)
-  ;; (linum-relative-global-mode)
+  (linum-relative-global-mode)
 
   ;; Load my vanilla emacs file
   (load "~/dotfiles/emacs/.emacs.d/init.el")
