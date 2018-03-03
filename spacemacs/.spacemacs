@@ -59,7 +59,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+                                      evil-mc
+                                      )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -307,8 +309,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   )
 
-(defun dotspacemacs/user-config ()
-  "Configuration function for user code.
+(defun user/config-Configuration ()
+  "dotspacemacs function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration.
 This is the place where most of your configurations should be done. Unless it is
@@ -321,6 +323,7 @@ you should place your code here."
   (global-linum-mode 1)
   (linum-relative-global-mode)
 
+  (global-evil-mc-mode  1)
   ;; Load my vanilla emacs file
   (load "~/dotfiles/emacs/.emacs.d/init.el")
  )

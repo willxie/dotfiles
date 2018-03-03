@@ -45,7 +45,7 @@ prettyjson() { cat $1 | python -m json.tool | less}
 alias pj='prettyjson'
 
 # Increase Jupyter notebook memory
-alias jnb='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
+alias jnb='jupyter notebook --NotebookApp.iopub_data_rate_limit=100000000'
 alias py='python'
 
 # Google cloud
@@ -70,7 +70,7 @@ alias roscoresim='roscore &; sleep 4s &&  rosparam set use_sim_time true && fg'
 alias roskill='~/cruise/ros/scripts/stop_ros.sh'
 
 # CUDA
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/cuda/extras/CUPTI/lib64/:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/_cuda/lib64/:/usr/local/_cuda/extras/CUPTI/lib64/:/usr/local/cuda/extras/CUPTI/lib64/:$LD_LIBRARY_PATH
 
 # Google cloud
 alias gls='gsutil -m ls'

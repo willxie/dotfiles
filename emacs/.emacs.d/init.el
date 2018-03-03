@@ -124,7 +124,7 @@
 (setq-default cursor-type 'box)
 
 ;; Stop the cursor from blinking
-(blink-cursor-mode -1)
+;; (blink-cursor-mode -1)
 
 ;; Revert buffer
 (global-set-key [(control c) (control r)] 'revert-buffer)
