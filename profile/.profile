@@ -68,6 +68,7 @@ alias N='nautilus --no-desktop&'
 # Cruise ros sim time
 alias roscoresim='roscore &; sleep 4s &&  rosparam set use_sim_time true && fg'
 alias roskill='~/cruise/ros/scripts/stop_ros.sh'
+alias cruise='cd ~/cruise'
 
 # CUDA
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/_cuda/lib64/:/usr/local/_cuda/extras/CUPTI/lib64/:/usr/local/cuda/extras/CUPTI/lib64/:$LD_LIBRARY_PATH

@@ -309,7 +309,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   )
 
-(defun user/config-Configuration ()
+(defun  dotspacemacs/user-config ()
   "dotspacemacs function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration.
