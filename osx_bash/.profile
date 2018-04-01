@@ -2,8 +2,8 @@
 alias grep='grep --color=auto'
 
 # Emacs Mac Port commandline
-alias emacs='open -a /usr/local/Cellar/emacs-mac/emacs-25.3-mac-6.8/Emacs.app $1'
-alias ec='/usr/local/Cellar/emacs-mac/emacs-25.3-mac-6.8/Emacs.app/Contents/MacOS/bin/emacsclient'
+alias emacs='open -a /Applications/Emacs.app $1'
+alias ec='emacsclient'
 
 # Mac
 # alias gcc='/usr/local/bin/gcc-6 -std=c++11'
