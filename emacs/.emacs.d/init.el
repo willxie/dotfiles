@@ -327,8 +327,9 @@ See `comment-region' for behavior of a prefix arg."
 (use-package py-autopep8
   :ensure t
   :config
+  (setq py-autopep8-options '("--max-line-length=120"))
   (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
-  )
+ )
 
 ;; Protobuf mode
 (use-package protobuf-mode
@@ -365,3 +366,7 @@ See `comment-region' for behavior of a prefix arg."
 (use-package undo-tree
   :init
   (global-undo-tree-mode))
+
+(use-package cuda-mode
+  :ensure t
+ )
