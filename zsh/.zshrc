@@ -90,6 +90,9 @@ source $ZSH/oh-my-zsh.sh
 # Disable share history
 unsetopt share_history
 
+# Reload global history
+fc -R
+
 alias zshrc='source ~/.zshrc'
 
 # virtual env
