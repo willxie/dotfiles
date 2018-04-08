@@ -31,13 +31,13 @@
 
 ;;===================================================================
 ;; Stop that noob stuff at startup
-(if window-system
-(setq inhibit-startup-message t)
-(menu-bar-mode -1)
-(tool-bar-mode -1))
+;; (if window-system
+;; (setq inhibit-startup-message t)
+;; (menu-bar-mode -1)
+;; (tool-bar-mode -1))
 
 ;; ELECTRIC PAIIR
-(electric-pair-mode 1)
+;; (electric-pair-mode 1)
 
 ;; Keybonds
 (global-set-key [(hyper q)] 'save-buffers-kill-terminal)
@@ -163,8 +163,8 @@
 (setq hippie-expand-try-functions-list '(try-expand-dabbrev try-expand-dabbrev-all-buffers try-expand-dabbrev-from-kill try-complete-file-name-partially try-complete-file-name try-expand-all-abbrevs try-expand-list try-expand-line try-complete-lisp-symbol-partially try-complete-lisp-symbol))
 
 ;; IBuffer
-(global-set-key (kbd "C-x C-b") 'ibuffer)
-(autoload 'ibuffer "ibuffer" "List buffers." t)
+;; (global-set-key (kbd "C-x C-b") 'ibuffer)
+;; (autoload 'ibuffer "ibuffer" "List buffers." t)
 
 ;; Open .h files in C++ mode
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
@@ -219,18 +219,18 @@ See `comment-region' for behavior of a prefix arg."
 
 
 ;; Markdown config
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(markdown-command "/usr/local/bin/pandoc")
- '(package-selected-packages
-   (quote
-    (yaml-mode highlight-indent-guides highlight-indentation-guides highlight-indentation cython-mode jedi py-autopep8 protobuf-mode cmake-mode clang-format clang-format-buffer smartparens flx-ido redo+ highlight-parentheses railscasts-theme use-package))))
-(autoload 'gfm-mode "markdown-mode"
-   "Major mode for editing GitHub Flavored Markdown files" t)
-(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(markdown-command "/usr/local/bin/pandoc")
+;;  '(package-selected-packages
+;;    (quote
+;;     (yaml-mode highlight-indent-guides highlight-indentation-guides highlight-indentation cython-mode jedi py-autopep8 protobuf-mode cmake-mode clang-format clang-format-buffer smartparens flx-ido redo+ highlight-parentheses railscasts-theme use-package))))
+;; (autoload 'gfm-mode "markdown-mode"
+;;    "Major mode for editing GitHub Flavored Markdown files" t)
+;; (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -293,21 +293,21 @@ See `comment-region' for behavior of a prefix arg."
   (load-theme 'railscasts t nil))
 
 ;; Highlight and pair parentheses
-(use-package highlight-parentheses
-  :ensure t)
+;; (use-package highlight-parentheses
+;;   :ensure t)
 
 ;; Fuzzy match
-(use-package flx-ido
-  :ensure t
-  :init
-  ;; disable ido faces to see flx highlights.
-  (setq ido-enable-flex-matching t)
-  (setq ido-use-faces nil)
-  :config
-  (ido-mode 1)
-  (ido-everywhere 1)
-  (flx-ido-mode 1)
-)
+;; (use-package flx-ido
+;;   :ensure t
+;;   :init
+;;   ;; disable ido faces to see flx highlights.
+;;   (setq ido-enable-flex-matching t)
+;;   (setq ido-use-faces nil)
+;;   :config
+;;   (ido-mode 1)
+;;   (ido-everywhere 1)
+;;   (flx-ido-mode 1)
+;; )
 
 ;; Auto C++ clang format on save
 (use-package clang-format
@@ -332,8 +332,8 @@ See `comment-region' for behavior of a prefix arg."
  )
 
 ;; Protobuf mode
-(use-package protobuf-mode
-  :ensure t)
+;; (use-package protobuf-mode
+;;   :ensure t)
 
 ;; Python auto-complete
 ;; (use-package jedi
@@ -344,23 +344,23 @@ See `comment-region' for behavior of a prefix arg."
 ;;   )
 
 ;; Cython
-(use-package cython-mode
-  :ensure t)
+;; (use-package cython-mode
+;;   :ensure t)
 
 ;; Indentation highlight
-(use-package highlight-indent-guides
-  :ensure t
-  :config
-  (setq highlight-indent-guides-method 'character)
-  (add-hook 'python-mode-hook 'highlight-indent-guides-mode)
- )
+;; (use-package highlight-indent-guides
+;;   :ensure t
+;;   :config
+;;   (setq highlight-indent-guides-method 'character)
+;;   (add-hook 'python-mode-hook 'highlight-indent-guides-mode)
+;;  )
 
 ;; Yaml
-(use-package yaml-mode
-  :ensure t
-  :config
-  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
-)
+;; (use-package yaml-mode
+;;   :ensure t
+;;   :config
+;;   (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+;; )
 
 ;; Allow redo
 (use-package undo-tree
