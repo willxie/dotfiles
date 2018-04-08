@@ -108,4 +108,3 @@ fi
 
 # Caps lock to Control
 setxkbmap -layout us -option ctrl:nocaps
-[ -s /home/wxie/cruise/setup/../ros/scripts/run_setup.sh ] && . /home/wxie/cruise/setup/../ros/scripts/run_setup.sh

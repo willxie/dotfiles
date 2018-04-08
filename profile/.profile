@@ -21,20 +21,11 @@
 #     PATH="$HOME/bin:$PATH"
 # fi
 
-# Cruise ros thing to run
+# ROS stuff
 [ -s /home/wxie/cruise/setup/../ros/scripts/run_setup.sh ] && . /home/wxie/cruise/setup/../ros/scripts/run_setup.sh
-
-# Caps lock to Control
-# setxkbmap -layout us -option ctrl:nocaps
 
 # More colors
 export TERM="xterm-256color"
-
-# Extra python paths
-export PYTHONPATH=~/minerva:$PYTHONPATH
-
-# Minerva
-export MINERVA_ROOT=~/minerva
 
 # Ansible
 export ANSIBLE_COW_SELECTION=random
@@ -49,7 +40,6 @@ alias jnb='jupyter notebook --NotebookApp.iopub_data_rate_limit=100000000'
 alias py='python'
 
 # Google cloud
-# export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/application_default_credentials.json
 export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539ed1f38bb6.json
 
 # Emacs
@@ -69,6 +59,9 @@ alias N='nautilus --no-desktop&'
 alias roscoresim='roscore &; sleep 4s &&  rosparam set use_sim_time true && fg'
 alias roskill='~/cruise/ros/scripts/stop_ros.sh'
 alias cruise='cd ~/cruise'
+# For running circle jobs
+export CIRCLE_TOKEN=46c08a4cee823b3b980c8579e269d95c8254264b
+
 
 # CUDA
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/_cuda/lib64/:/usr/local/_cuda/extras/CUPTI/lib64/:/usr/local/cuda/extras/CUPTI/lib64/:$LD_LIBRARY_PATH
