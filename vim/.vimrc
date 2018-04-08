@@ -15,6 +15,7 @@ syntax on
 
 " Show line number
 set number
+set relativenumber
 
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
@@ -41,9 +42,9 @@ set backspace=indent,eol,start
 " Display the cursor position on the last line of the screen or in the status
 " line of a window
 set ruler
- 
+
 " Always display the status line, even if only one window is displayed
-set laststatus=2 
+set laststatus=2
 
 
 " show existing tab with 4 spaces width
@@ -55,12 +56,3 @@ set expandtab
 
 " Railcast theme
 colorscheme railscasts
-
-
-
-
-
-
-
-
-
