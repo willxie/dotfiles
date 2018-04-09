@@ -24,11 +24,15 @@
 # Do os specific things
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux
+    # Emacsclient and disown
+    ec() { emacsclient "$@" &! }
+
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OSX
     alias emacs='open -a /Applications/Emacs.app $1'
-    alias ec='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
+    alias ec='open -a /Applications/Emacs.app $1'
+    # alias ec='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
 
     # Compile
     # alias gcc='/usr/local/bin/gcc-6 -std=c++11'
@@ -56,9 +60,6 @@ alias py3='python3'
 
 # Colored list directory
 alias grep='grep --color=auto'
-
-# Emacs
-ec() { emacsclient "$@" &! }
 
 # Mkdir and then cd to it
 mkdircd ()
