@@ -96,3 +96,4 @@ export ANSIBLE_COW_SELECTION=random
 
 # For running circle jobs
 export CIRCLE_TOKEN=46c08a4cee823b3b980c8579e269d95c8254264b
+export KUBECONFIG=~/.kube/config.d/$(whoami).conf

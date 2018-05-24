@@ -22,6 +22,7 @@ values."
      semantic
      python
      c-c++
+     docker
      helm
      ;; smex
      ;; ivy
@@ -51,7 +52,7 @@ values."
    ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '()
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
-   dotspacemacs-install-packages 'used-only-but-keep-unused))
+   dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
   "Initialization function.
@@ -316,6 +317,10 @@ you should place your code here."
   ;; Enabale undo-tree
   ;; (global-undo-tree-mode)
 
+
+  ;; Turn off interactive lisp compiling to speedup xml read
+  (global-hl-line-mode -1)
+
   ;; Load my vanilla emacs file
   (load "~/dotfiles/emacs/.emacs.d/init.el")
  )
@@ -333,7 +338,7 @@ you should place your code here."
  '(markdown-command "/usr/local/bin/pandoc")
  '(package-selected-packages
    (quote
-    (cuda-mode wolfram-mode web-mode thrift tagedit stan-mode slim-mode scss-mode scad-mode sass-mode qml-mode pug-mode matlab-mode less-css-mode julia-mode helm-css-scss haml-mode emmet-mode arduino-mode vimrc-mode dactyl-mode mmm-mode markdown-toc markdown-mode gh-md stickyfunc-enhance srefactor smeargle orgit magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit ghub let-alist with-editor disaster cmake-mode yapfify ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline reveal-in-osx-finder restart-emacs request rainbow-delimiters pyvenv pytest pyenv-mode py-isort popwin pip-requirements persp-mode pcre2el pbcopy paradox spinner osx-trash osx-dictionary org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum live-py-mode linum-relative link-hint launchctl info+ indent-guide hydra hy-mode dash-functional hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump diminish cython-mode column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed anaconda-mode pythonic f dash s aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
+    (dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat py-autopep8 railscasts-theme cuda-mode wolfram-mode web-mode thrift tagedit stan-mode slim-mode scss-mode scad-mode sass-mode qml-mode pug-mode matlab-mode less-css-mode julia-mode helm-css-scss haml-mode emmet-mode arduino-mode vimrc-mode dactyl-mode mmm-mode markdown-toc markdown-mode gh-md stickyfunc-enhance srefactor smeargle orgit magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit ghub let-alist with-editor disaster cmake-mode yapfify ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline reveal-in-osx-finder restart-emacs request rainbow-delimiters pyvenv pytest pyenv-mode py-isort popwin pip-requirements persp-mode pcre2el pbcopy paradox spinner osx-trash osx-dictionary org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum live-py-mode linum-relative link-hint launchctl info+ indent-guide hydra hy-mode dash-functional hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump diminish cython-mode column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed anaconda-mode pythonic f dash s aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -214,6 +214,7 @@ See `comment-region' for behavior of a prefix arg."
 ;; (global-set-key (kbd "M-;") 'comment-and-copy-region)
 
 ;; Save session
+(setq desktop-auto-save-timeout)
 (desktop-save-mode 1)
 (desktop-read)
 
