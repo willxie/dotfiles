@@ -21,7 +21,7 @@
 #     PATH="$HOME/bin:$PATH"
 # fi
 
-# Do os specific things
+# Do OS specific things
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux
     # Emacsclient and disown
@@ -49,6 +49,9 @@ fi
 # More colors
 export TERM="xterm-256color"
 
+# Sudo emacs
+alias sudoec="SUDO_EDITOR=\"emacsclient\" sudo -e"
+
 # Json
 prettyjson() { cat $1 | python -m json.tool | less}
 alias pj='prettyjson'
@@ -68,11 +71,17 @@ mkdircd ()
         cd -P -- "$1"
 }
 
+# Golang
+export GOROOT=/usr/lib/go-1.10
+export GOPATH=~/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
 # Nautilus without annoying desktop
 alias N='nautilus --no-desktop&'
 
 # CUDA
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/_cuda/lib64/:/usr/local/_cuda/extras/CUPTI/lib64/:/usr/local/cuda/extras/CUPTI/lib64/:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/_cuda/lib64/:/usr/local/_cuda/extras/CUPTI/lib64/:/usr/local/cuda/extras/CUPTI/lib64/:$LD_LIBRARY_PATH
+export PATH=$PATH:/usr/local/cuda/bin
 
 # Google cloud
 export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539ed1f38bb6.json
@@ -93,7 +102,12 @@ alias cruise='cd ~/cruise'
 alias ans="cd ~/cruise/setup;./run_ansible.sh"
 export ANSIBLE_COW_SELECTION=random
 
-
 # For running circle jobs
 export CIRCLE_TOKEN=46c08a4cee823b3b980c8579e269d95c8254264b
 export KUBECONFIG=~/.kube/config.d/$(whoami).conf
+
+# Pointnet
+alias pointnet='cd ~/frustum-pointnets'
+
+# Segmark server
+alias segmark='cd ~/segmark/bag_data'
