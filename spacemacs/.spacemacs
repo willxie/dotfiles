@@ -33,29 +33,38 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(python
+   '(
+     ;; ----------------------------------------------------------------
+     ;; Example of useful layers you may want to use right away.
+     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
+     ;; `M-m f e R' (Emacs style) to install them.
+     ;; ----------------------------------------------------------------
+
+     ;; Languages
+     python
+     c-c++
+     protobuf
      go
      ansible
      vimscript
      yaml
      html
      markdown
-     semantic
-     c-c++
+     emacs-lisp
+     ;; semantic
+     ;; extra-langs 
+
+     ;; Env
      docker
      osx
      git
-     ;; extra-langs 
-     protobuf
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
-     ;; `M-m f e R' (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
+
+     ;; Emacs packages
      helm
      ;; auto-completion
      ;; better-defaults
-     emacs-lisp
+     ;; git
+     ;; markdown
      multiple-cursors
      neotree
      ;; org
@@ -76,7 +85,7 @@ This function should only modify configuration layer settings."
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
                                       railscasts-theme
-                                      cuda-mode
+                                      ;; cuda-mode
                                       )
    
    ;; A list of packages that cannot be updated.
@@ -152,7 +161,7 @@ It should only modify the values of Spacemacs settings."
    ;; when the current branch is not `develop'. Note that checking for
    ;; new versions works via git commands, thus it calls GitHub services
    ;; whenever you start Emacs. (default nil)
-   dotspacemacs-check-for-update nil
+   dotspacemacs-check-for-update t 
 
    ;; If non-nil, a form that evaluates to a package directory. For example, to
    ;; use different package directories for different Emacs versions, set this
@@ -165,7 +174,7 @@ It should only modify the values of Spacemacs settings."
    ;; with `:variables' keyword (similar to layers). Check the editing styles
    ;; section of the documentation for details on available variables.
    ;; (default 'vim)
-   dotspacemacs-editing-style 'hybrid
+   dotspacemacs-editing-style 'vim
 
    ;; If non-nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
@@ -383,7 +392,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
-   dotspacemacs-enable-server nil
+   dotspacemacs-enable-server t 
 
    ;; Set the emacs server socket location.
    ;; If nil, uses whatever the Emacs default is, otherwise a directory path
@@ -485,39 +494,12 @@ before packages are loaded."
   ;; Auto revert
   (global-auto-revert-mode 1)
 
-  ;; ;; Require a newline at EOF
-  ;; (setq require-final-newline t)
-
-  ;; Easier navigation
-  ;; (global-set-key (kbd "M-n") 'forward-paragraph)
-  ;; (global-set-key (kbd "M-p") 'backward-paragraph)
-
   ;; Scroll one line at a time (less "jumpy" than defaults)
   (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
   (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
   (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
   (setq scroll-step 1) ;; keyboard scroll one line at a time
 
-  ;; Fuzzy match for buffer search
-  ;; (custom-set-variables '(helm-buffers-fuzzy-matching t))
-
-  ;; ;; Undo just like vanilla emacs
-  ;; (setq evil-want-fine-undo t)
-
-  ;; Multiple cursors!
-  ;; (global-evil-mc-mode 1)
-
-  ;; Reload tags automatically
-  ;; (setq tags-revert-without-query 1)
-
-  ;; Enabale undo-tree
-  ;; (global-undo-tree-mode)
-
-  ;; ;; XML 4 spaces indent
-  ;; (setq nxml-child-indent 4 nxml-attribute-indent 4)
-
-  ;; Load my vanilla emacs file
-  ;; (load "~/dotfiles/emacs/.emacs.d/init.el")
 
   ;; Unpack old emacs file here
   (load-theme 'railscasts t nil)
@@ -543,8 +525,37 @@ before packages are loaded."
   ;; (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
   (add-to-list 'auto-mode-alist '("\\.launch\\'" . nxml-mode))
 
+  ;; Require a newline at EOF
+  (setq require-final-newline t)
+
+  ;; Unused for now...
+
+  ;; Easier navigation
+  ;; (global-set-key (kbd "M-n") 'forward-paragraph)
+  ;; (global-set-key (kbd "M-p") 'backward-paragraph)
+
+  ;; Fuzzy match for buffer search
+  ;; (custom-set-variables '(helm-buffers-fuzzy-matching t))
+
+  ;; ;; Undo just like vanilla emacs
+  ;; (setq evil-want-fine-undo t)
+
+  ;; Multiple cursors!
+  ;; (global-evil-mc-mode 1)
+
+  ;; Reload tags automatically
+  ;; (setq tags-revert-without-query 1)
+
+  ;; Enabale undo-tree
+  ;; (global-undo-tree-mode)
+
+  ;; ;; XML 4 spaces indent
+  ;; (setq nxml-child-indent 4 nxml-attribute-indent 4)
+
+  ;; Load my vanilla emacs file
+  ;; (load "~/dotfiles/emacs/.emacs.d/init.el")
   ;; Show function name
-  (which-function-mode 1)
+  ;; (which-function-mode 1)
 
   ;; ;; Auto reload tags
   ;; (setq tags-table-list
@@ -565,10 +576,9 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (protobuf-mode railscasts-theme cuda-mode yaml-mode web-mode web-beautify vimrc-mode tagedit stickyfunc-enhance srefactor smeargle slim-mode scss-mode sass-mode reveal-in-osx-finder pug-mode prettier-js osx-trash osx-dictionary mmm-mode markdown-toc markdown-mode magit-svn magit-gitflow less-css-mode launchctl jinja2-mode impatient-mode htmlize simple-httpd helm-rtags rtags helm-gitignore helm-git-grep helm-css-scss haml-mode google-c-style godoctor go-tag go-rename go-impl go-guru go-gen-test go-fill-struct go-eldoc go-mode gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md evil-magit magit git-commit ghub treepy let-alist graphql with-editor emmet-mode dockerfile-mode docker json-mode tablist magit-popup docker-tramp json-snatcher json-reformat disaster dactyl-mode clang-format ansible-doc ansible yapfify ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline-all-the-icons restart-emacs request rainbow-delimiters pyvenv pytest pyenv-mode py-isort popwin pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox overseer org-plus-contrib org-bullets open-junk-file neotree nameless move-text macrostep lorem-ipsum live-py-mode linum-relative link-hint indent-guide importmagic hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio font-lock+ flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline diminish define-word cython-mode counsel-projectile column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile anaconda-mode aggressive-indent ace-window ace-link ace-jump-helm-line))))
+    (yapfify yaml-mode web-mode web-beautify vimrc-mode tagedit stickyfunc-enhance srefactor smeargle slim-mode scss-mode sass-mode reveal-in-osx-finder railscasts-theme pyvenv pytest pyenv-mode py-isort pug-mode protobuf-mode prettier-js pippel pipenv pip-requirements osx-trash osx-dictionary mmm-mode markdown-toc markdown-mode magit-svn magit-gitflow live-py-mode less-css-mode launchctl jinja2-mode importmagic epc ctable concurrent deferred impatient-mode htmlize simple-httpd helm-rtags rtags helm-pydoc helm-gitignore helm-git-grep helm-css-scss haml-mode google-c-style godoctor go-tag go-rename go-impl go-guru go-gen-test go-fill-struct go-eldoc go-mode gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md evil-magit magit git-commit ghub treepy graphql with-editor emmet-mode dockerfile-mode docker json-mode tablist magit-popup docker-tramp json-snatcher json-reformat disaster dactyl-mode cython-mode clang-format ansible-doc ansible anaconda-mode pythonic ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org symon string-inflection spaceline-all-the-icons restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox overseer org-plus-contrib org-bullets open-junk-file neotree nameless move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio font-lock+ flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline diminish define-word counsel-projectile column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
