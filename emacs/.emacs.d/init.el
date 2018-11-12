@@ -214,9 +214,9 @@ See `comment-region' for behavior of a prefix arg."
 ;; (global-set-key (kbd "M-;") 'comment-and-copy-region)
 
 ;; Save session
-(setq desktop-auto-save-timeout)
-(desktop-save-mode 1)
-(desktop-read)
+;; (setq desktop-auto-save-timeout 30)
+;; (desktop-save-mode 1)
+;; (desktop-read)
 
 
 ;; Markdown config
@@ -255,6 +255,9 @@ See `comment-region' for behavior of a prefix arg."
 ;; Set font
 ;; (set-default-font "DejaVu Sans Mono-11")
 
+;; Disable accidental freeze
+(global-unset-key (kbd "C-z"))
+
 ;; Caffe prototxt
 (setq caffe-mode-highlights
       '((".*\s{" . font-lock-function-name-face)
@@ -280,6 +283,11 @@ See `comment-region' for behavior of a prefix arg."
 ;; Easier navigation
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
+
+;; Auto reload tags
+(setq tags-table-list
+      '("~/cruise/ros/src"))
+(setq tags-revert-without-query t)
 
 ;;===================================================================
 ;; Packages
@@ -333,8 +341,8 @@ See `comment-region' for behavior of a prefix arg."
  )
 
 ;; Protobuf mode
-;; (use-package protobuf-mode
-;;   :ensure t)
+(use-package protobuf-mode
+  :ensure t)
 
 ;; Python auto-complete
 ;; (use-package jedi
