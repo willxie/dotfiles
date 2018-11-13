@@ -211,8 +211,7 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         ;; railscasts
-                         ;; railscasts-reloaded
+                         railscasts     ; Use this to set spacemacs related colors
                          spacemacs-dark
                          )
 
@@ -442,7 +441,7 @@ It should only modify the values of Spacemacs settings."
    ;; `trailing' to delete only the whitespace at end of lines, `changed' to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup 'trailing 
 
    ;; Either nil or a number of seconds. If non-nil zone out after the specified
    ;; number of seconds. (default nil)
@@ -530,11 +529,6 @@ before packages are loaded."
   ;; Make linums relative by default
   ;; (global-linum-mode 1)
   ;; (linum-relative-global-mode)
-
-  ;; (use-package railscasts-reloaded-theme
-  ;;   :ensure t
-  ;;   :init
-  ;;   (load-theme 'railscasts-reloaded t))
 
   ;; Easier navigation
   ;; (global-set-key (kbd "M-n") 'forward-paragraph)
