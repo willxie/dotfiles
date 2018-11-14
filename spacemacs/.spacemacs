@@ -42,7 +42,11 @@ This function should only modify configuration layer settings."
 
      ;; Languages
      python
-     c-c++
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support 't
+            c-c++-enable-clang-format-on-save 't)
+
      protobuf
      go
      ansible
@@ -504,13 +508,15 @@ before packages are loaded."
   (setq evil-want-fine-undo t)
 
   ;; Auto C++ clang format on save
-  (global-set-key (kbd "C-c i") 'clang-format-region)
-  (global-set-key (kbd "C-c u") 'clang-format-buffer)
-  (defun clang-format-before-save ()
-    (add-hook 'before-save-hook 'clang-format-before-save)
-    (interactive)
-    (when (eq major-mode 'c++-mode) (clang-format-buffer)))
-  (add-hook 'before-save-hook 'clang-format-before-save)
+  ;; (global-set-key (kbd "C-c i") 'clang-format-region)
+  ;; (global-set-key (kbd "C-c u") 'clang-format-buffer)
+  ;; (defun clang-format-before-save ()
+  ;;   (add-hook 'before-save-hook 'clang-format-before-save)
+  ;;   (interactive)
+  ;;   (when (eq major-mode 'c++-mode) (clang-format-buffer)))
+  ;; (add-hook 'before-save-hook 'clang-format-before-save)
+
+  ;; (setq c-c++-enable-clang-format-on-save t)
 
   ;; Format python on save
   ;; (add-hook 'python-mode-hook 'yapf-mode)
