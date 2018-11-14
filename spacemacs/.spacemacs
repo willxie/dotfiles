@@ -52,7 +52,7 @@ This function should only modify configuration layer settings."
      markdown
      emacs-lisp
      ;; semantic
-     ;; extra-langs 
+     ;; extra-langs
 
      ;; Env
      docker
@@ -88,7 +88,7 @@ This function should only modify configuration layer settings."
                                       cuda-mode
                                       railscasts-reloaded-theme
                                       )
-   
+
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
 
@@ -175,7 +175,7 @@ It should only modify the values of Spacemacs settings."
    ;; with `:variables' keyword (similar to layers). Check the editing styles
    ;; section of the documentation for details on available variables.
    ;; (default 'vim)
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'hybrid
 
    ;; If non-nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
@@ -395,7 +395,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
-   dotspacemacs-enable-server t 
+   dotspacemacs-enable-server t
 
    ;; Set the emacs server socket location.
    ;; If nil, uses whatever the Emacs default is, otherwise a directory path
@@ -441,7 +441,7 @@ It should only modify the values of Spacemacs settings."
    ;; `trailing' to delete only the whitespace at end of lines, `changed' to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup 'trailing 
+   dotspacemacs-whitespace-cleanup 'trailing
 
    ;; Either nil or a number of seconds. If non-nil zone out after the specified
    ;; number of seconds. (default nil)
@@ -499,6 +499,8 @@ before packages are loaded."
   (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
   (setq scroll-step 1) ;; keyboard scroll one line at a time
 
+  ;; Undo just like vanilla emacs
+  (setq evil-want-fine-undo t)
 
   ;; Auto C++ clang format on save
   (global-set-key (kbd "C-c i") 'clang-format-region)
@@ -509,6 +511,8 @@ before packages are loaded."
     (when (eq major-mode 'c++-mode) (clang-format-buffer)))
   (add-hook 'before-save-hook 'clang-format-before-save)
 
+  ;; Format python on save
+  (add-hook 'python-mode-hook 'yapf-mode)
 
   ;; Cuda mode
   (use-package cuda-mode
@@ -536,9 +540,6 @@ before packages are loaded."
 
   ;; Fuzzy match for buffer search
   ;; (custom-set-variables '(helm-buffers-fuzzy-matching t))
-
-  ;; ;; Undo just like vanilla emacs
-  ;; (setq evil-want-fine-undo t)
 
   ;; Multiple cursors!
   ;; (global-evil-mc-mode 1)
