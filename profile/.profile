@@ -111,3 +111,6 @@ alias pointnet='cd ~/frustum-pointnets'
 
 # Segmark server
 alias segmark='cd ~/segmark/bag_data'
+
+# Powerline on mac
+source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
