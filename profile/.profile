@@ -58,7 +58,8 @@ alias pj='prettyjson'
 
 # Increase Jupyter notebook memory
 alias jnb='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
-alias py='python2'
+alias py='python'
+alias py2='python2'
 alias py3='python3'
 
 # Colored list directory
