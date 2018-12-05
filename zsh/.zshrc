@@ -98,8 +98,8 @@ alias zshrc='source ~/.zshrc'
 # virtual env
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 
-source ~/.fzf.zsh
-# source ~/.bashrc
-# [[ -e ~/.bashrc ]] && emulate sh -c 'source ~/.bashrc'
-# emulate -R ksh -c 'source ~/.bashrc'
+# Fuzzy search
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Shell invariant settings
 source ~/.profile
