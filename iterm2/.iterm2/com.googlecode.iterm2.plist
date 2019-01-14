@@ -698,9 +698,9 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/dotfiles/iterm2</string>
+	<string>~/Downloads</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
+	<string>{720, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -738,31 +738,25 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>896 261 445 103 0 0 1440 877 </string>
+	<string>167 110 751 432 0 0 1440 877 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>410 363 620 392 0 0 1440 877 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>278 339 599 388 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>490 262 796 486 0 0 1440 877 </string>
+	<string>87 227 796 486 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>155 119 899 417 0 0 1440 877 </string>
+	<string>9 114 1026 627 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>176 425 570 452 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 10</key>
-	<string>365 226 570 452 0 0 1440 877 </string>
+	<string>414 191 1026 627 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 79 1440 798 0 0 1440 877 </string>
+	<string>414 243 1026 627 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>218 387 570 452 0 0 1440 877 </string>
+	<string>402 33 1026 627 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>239 364 570 452 0 0 1440 877 </string>
+	<string>260 234 1026 627 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>260 341 570 452 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 6</key>
-	<string>281 318 570 452 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 7</key>
-	<string>302 295 570 452 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 8</key>
-	<string>323 272 570 452 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 9</key>
-	<string>344 249 570 452 0 0 1440 877 </string>
+	<string>281 200 1026 627 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1320,7 +1314,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGMForPowerline-Regular 13</string>
+			<string>MesloLGM-RegularForPowerline 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1387,14 +1381,97 @@
 			<string>/Users/wxie</string>
 		</dict>
 	</array>
-	<key>NoSyncHaveRequestedFullDiskAccess</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>22851572-3BC4-4B11-9D5C-F05A3CEC5ECB</string>
+	<string>C3D1101D-D048-4F57-A003-97F6AD287AEF</string>
+	<key>NoSyncLastTipTime</key>
+	<real>538554804.84889805</real>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>565476967.036479</real>
+	<real>507594922.21502602</real>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
+		<string>0004</string>
+		<string>0005</string>
+		<string>0006</string>
+		<string>0007</string>
+		<string>0008</string>
+		<string>0009</string>
+		<string>0010</string>
+		<string>0011</string>
+		<string>0012</string>
+		<string>0013</string>
+		<string>0014</string>
+		<string>0015</string>
+		<string>0016</string>
+		<string>0017</string>
+		<string>0017</string>
+		<string>0018</string>
+		<string>0019</string>
+		<string>0020</string>
+		<string>0021</string>
+		<string>0022</string>
+		<string>0023</string>
+		<string>0024</string>
+		<string>0025</string>
+		<string>0026</string>
+		<string>0027</string>
+		<string>0028</string>
+		<string>0029</string>
+		<string>0030</string>
+		<string>0031</string>
+		<string>0032</string>
+		<string>0033</string>
+		<string>0034</string>
+		<string>0035</string>
+		<string>0036</string>
+		<string>0037</string>
+		<string>0038</string>
+		<string>0039</string>
+		<string>0040</string>
+		<string>0041</string>
+		<string>0042</string>
+		<string>0043</string>
+		<string>0044</string>
+		<string>0045</string>
+		<string>0046</string>
+		<string>0047</string>
+		<string>0048</string>
+		<string>0049</string>
+		<string>0050</string>
+		<string>0051</string>
+		<string>0052</string>
+		<string>0053</string>
+		<string>0054</string>
+		<string>0055</string>
+		<string>0056</string>
+		<string>0057</string>
+		<string>0058</string>
+		<string>0059</string>
+		<string>0060</string>
+		<string>0061</string>
+		<string>0062</string>
+		<string>0063</string>
+		<string>0064</string>
+		<string>0065</string>
+		<string>0066</string>
+		<string>0067</string>
+		<string>0068</string>
+		<string>0069</string>
+		<string>0070</string>
+		<string>0071</string>
+	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1438,16 +1515,18 @@
 	<string>/Users/wxie/dotfiles/iterm2/.iterm2</string>
 	<key>PromptOnQuit</key>
 	<false/>
+	<key>SUAutomaticallyUpdate</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=63</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=62</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-12-03T04:36:15Z</date>
+	<date>2019-01-12T08:47:28Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
