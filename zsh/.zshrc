@@ -102,4 +102,4 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Shell invariant settings
-source ~/.profile
+source ~/.zsh_profile
