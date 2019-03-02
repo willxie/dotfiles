@@ -102,4 +102,10 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Shell invariant settings
-source ~/.zsh_profile
+source ~/.zprofile
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/wxie/google-cloud-sdk/path.zsh.inc' ]; then . '/home/wxie/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/wxie/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/wxie/google-cloud-sdk/completion.zsh.inc'; fi

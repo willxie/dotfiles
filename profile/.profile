@@ -8,6 +8,9 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+if [ -n "$BASH_VERSION" ]; then
+   exit 1
+fi
 # # if running bash
 # if [ -n "$BASH_VERSION" ]; then
 #     # include .bashrc if it exists
@@ -54,6 +57,12 @@ alias sudoec="SUDO_EDITOR=\"emacsclient\" sudo -e"
 
 # Json
 prettyjson() { cat $1 | python -m json.tool | less}
+function pretty_csv {
+    column -t -s, -n "$@" | less -F -S -X -K
+}
+function pretty_tsv {
+    column -t -s $'\t' -n "$@" | less -F -S -X -K
+}
 alias pj='prettyjson'
 
 # Increase Jupyter notebook memory
@@ -72,9 +81,12 @@ mkdircd ()
         cd -P -- "$1"
 }
 
+# function agr { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
+ag-replace() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
+
 # Golang
-export GOROOT=/usr/lib/go-1.10
-export GOPATH=~/go
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Nautilus without annoying desktop
@@ -85,7 +97,7 @@ alias N='nautilus --no-desktop&'
 export PATH=$PATH:/usr/local/cuda/bin
 
 # Google cloud
-export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539ed1f38bb6.json
+# export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539ed1f38bb6.json
 alias gls='gsutil -m ls'
 alias gll='gsutil -m ls'
 alias grm='gsutil -m rm'
