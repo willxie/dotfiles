@@ -56,14 +56,13 @@ export TERM="xterm-256color"
 alias sudoec="SUDO_EDITOR=\"emacsclient\" sudo -e"
 
 # Json
-prettyjson() { cat $1 | python -m json.tool | less}
+pretty_json() { cat $1 | python -m json.tool | less}
 function pretty_csv {
     column -t -s, -n "$@" | less -F -S -X -K
 }
 function pretty_tsv {
     column -t -s $'\t' -n "$@" | less -F -S -X -K
 }
-alias pj='prettyjson'
 
 # Increase Jupyter notebook memory
 alias jnb='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
@@ -81,7 +80,6 @@ mkdircd ()
         cd -P -- "$1"
 }
 
-# function agr { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
 ag-replace() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
 
 # Golang
