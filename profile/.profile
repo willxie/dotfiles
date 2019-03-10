@@ -92,9 +92,16 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # Nautilus without annoying desktop
 alias N='nautilus --no-desktop&'
 
+[ -s /home/wxie/cruise/setup/../ros/scripts/run_setup.sh ] && . /home/wxie/cruise/setup/../ros/scripts/run_setup.sh
+alias roscoresim='roscore &; sleep 4s &&  rosparam set use_sim_time true && fg'
+alias roskill='~/cruise/ros/scripts/stop_ros.sh'
+alias cruise='cd ~/cruise'
+alias ans="cd ~/cruise/setup;./run_ansible.sh"
+export ANSIBLE_COW_SELECTION=random
+
 # CUDA
-# export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/_cuda/lib64/:/usr/local/_cuda/extras/CUPTI/lib64/:/usr/local/cuda/extras/CUPTI/lib64/:$LD_LIBRARY_PATH
-export PATH=$PATH:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/extras/CUPTI/lib64/:/usr/local/cuda/extras/CUPTI/lib64/$LD_LIBRARY_PATH
+# export PATH=$PATH:/usr/local/cuda/bin
 
 # Google cloud
 # export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539ed1f38bb6.json
@@ -106,14 +113,6 @@ alias gcp='gsutil -m  cp'
 alias gcat='gsutil -m cat'
 alias grsync='gsutil -m rsync'
 alias gdu='gsutil -m du -sch'
-
-# ROS stuff
-[ -s /home/wxie/cruise/setup/../ros/scripts/run_setup.sh ] && . /home/wxie/cruise/setup/../ros/scripts/run_setup.sh
-alias roscoresim='roscore &; sleep 4s &&  rosparam set use_sim_time true && fg'
-alias roskill='~/cruise/ros/scripts/stop_ros.sh'
-alias cruise='cd ~/cruise'
-alias ans="cd ~/cruise/setup;./run_ansible.sh"
-export ANSIBLE_COW_SELECTION=random
 
 # For running circle jobs
 export CIRCLE_TOKEN=46c08a4cee823b3b980c8579e269d95c8254264b
@@ -127,3 +126,5 @@ alias segmark='cd ~/segmark/bag_data'
 
 # # Powerline on mac
 # source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+
+# ROS stuff
