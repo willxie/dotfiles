@@ -8,6 +8,9 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+if [ -n "$BASH_VERSION" ]; then
+   exit 1
+fi
 # # if running bash
 # if [ -n "$BASH_VERSION" ]; then
 #     # include .bashrc if it exists
@@ -21,7 +24,7 @@
 #     PATH="$HOME/bin:$PATH"
 # fi
 
-# Do os specific things
+# Do OS specific things
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux
     # Emacsclient and disown
@@ -49,13 +52,22 @@ fi
 # More colors
 export TERM="xterm-256color"
 
+# Sudo emacs
+alias sudoec="SUDO_EDITOR=\"emacsclient\" sudo -e"
+
 # Json
-prettyjson() { cat $1 | python -m json.tool | less}
-alias pj='prettyjson'
+pretty_json() { cat $1 | python -m json.tool | less}
+function pretty_csv {
+    column -t -s, -n "$@" | less -F -S -X -K
+}
+function pretty_tsv {
+    column -t -s $'\t' -n "$@" | less -F -S -X -K
+}
 
 # Increase Jupyter notebook memory
 alias jnb='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
-alias py='python2'
+alias py='python'
+alias py2='python2'
 alias py3='python3'
 
 # Colored list directory
@@ -68,18 +80,29 @@ mkdircd ()
         cd -P -- "$1"
 }
 
+ag-replace() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
+
+# Golang
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
 # Nautilus without annoying desktop
 alias N='nautilus --no-desktop&'
 
+[ -s /home/wxie/cruise/setup/../ros/scripts/run_setup.sh ] && . /home/wxie/cruise/setup/../ros/scripts/run_setup.sh
+alias roscoresim='roscore &; sleep 4s &&  rosparam set use_sim_time true && fg'
+alias roskill='~/cruise/ros/scripts/stop_ros.sh'
+alias cruise='cd ~/cruise'
+alias ans="cd ~/cruise/setup;./run_ansible.sh"
+export ANSIBLE_COW_SELECTION=random
+
 # CUDA
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/_cuda/lib64/:/usr/local/_cuda/extras/CUPTI/lib64/:/usr/local/cuda/extras/CUPTI/lib64/:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/extras/CUPTI/lib64/:/usr/local/cuda/extras/CUPTI/lib64/$LD_LIBRARY_PATH
+# export PATH=$PATH:/usr/local/cuda/bin
 
 # Google cloud
 # export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539ed1f38bb6.json
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/wxie/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/wxie/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/wxie/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/wxie/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 alias gls='gsutil -m ls'
 alias gll='gsutil -m ls'
 alias grm='gsutil -m rm'
@@ -89,14 +112,15 @@ alias gcat='gsutil -m cat'
 alias grsync='gsutil -m rsync'
 alias gdu='gsutil -m du -sch'
 
-# ROS stuff
-[ -s /home/wxie/cruise/setup/../ros/scripts/run_setup.sh ] && . /home/wxie/cruise/setup/../ros/scripts/run_setup.sh
-alias roscoresim='roscore &; sleep 4s &&  rosparam set use_sim_time true && fg'
-alias roskill='~/cruise/ros/scripts/stop_ros.sh'
-alias cruise='cd ~/cruise'
-alias ans="cd ~/cruise/setup;./run_ansible.sh"
-export ANSIBLE_COW_SELECTION=random
-
-
 # For running circle jobs
 export CIRCLE_TOKEN=46c08a4cee823b3b980c8579e269d95c8254264b
+export KUBECONFIG=~/.kube/config.d/$(whoami).conf
+
+# Pointnet
+alias pointnet='cd ~/frustum-pointnets'
+
+# Segmark server
+alias segmark='cd ~/segmark/bag_data'
+
+# # Powerline on mac
+# source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
