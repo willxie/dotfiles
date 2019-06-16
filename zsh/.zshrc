@@ -102,3 +102,5 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 # [[ -e ~/.bashrc ]] && emulate sh -c 'source ~/.bashrc'
 # emulate -R ksh -c 'source ~/.bashrc'
 source ~/.profile
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

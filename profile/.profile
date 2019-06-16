@@ -75,7 +75,11 @@ alias N='nautilus --no-desktop&'
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/_cuda/lib64/:/usr/local/_cuda/extras/CUPTI/lib64/:/usr/local/cuda/extras/CUPTI/lib64/:$LD_LIBRARY_PATH
 
 # Google cloud
-export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539ed1f38bb6.json
+# export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539ed1f38bb6.json
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/wxie/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/wxie/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/wxie/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/wxie/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 alias gls='gsutil -m ls'
 alias gll='gsutil -m ls'
 alias grm='gsutil -m rm'
