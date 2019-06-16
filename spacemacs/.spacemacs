@@ -533,6 +533,7 @@ before packages are loaded."
   (add-to-list 'auto-mode-alist '("BUILD$" . bazel-mode))
 
   ;; Open .h files in C++ mode
+  (add-to-list 'auto-mode-alist '("\\.inl\\'" . c++-mode))
   ;; (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
   (add-to-list 'auto-mode-alist '("\\.launch\\'" . nxml-mode))
 
