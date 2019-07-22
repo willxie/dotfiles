@@ -123,8 +123,10 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # lock screen mod alt escape
 bindsym $mod+Mod1+Escape exec i3lock -c 333333
+
 # screenshot
 bindsym $mod+Print exec scrot -u '%Y%m%d_%H%M%S.png' -e 'mv $f ~/Downloads/'
+bindsym $mod+Shift+Print exec exec gnome-screenshot -i
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

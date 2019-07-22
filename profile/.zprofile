@@ -103,6 +103,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/extras/CUPTI/lib64/:/usr/local/cuda/e
 
 # Google cloud
 # export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539ed1f38bb6.json
+export BOTO_CONFIG='~/.config/gcloud/legacy_credentials/will.xie@getcruise.com/.boto'
 alias gls='gsutil -m ls'
 alias gll='gsutil -m ls'
 alias grm='gsutil -m rm'
@@ -111,6 +112,9 @@ alias gcp='gsutil -m  cp'
 alias gcat='gsutil -m cat'
 alias grsync='gsutil -m rsync'
 alias gdu='gsutil -m du -sch'
+
+# Enable [] in pip
+alias pip='noglob pip'
 
 # For running circle jobs
 export CIRCLE_TOKEN=46c08a4cee823b3b980c8579e269d95c8254264b

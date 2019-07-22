@@ -541,8 +541,12 @@ before packages are loaded."
   (setq require-final-newline t)
 
   ;; Fuzzy match for buffer search
-  (custom-set-variables '(helm-buffers-fuzzy-matching t))
+  ;; (custom-set-variables '(helm-buffers-fuzzy-matching t))
 
+
+  ;; Projectile caching
+  (setq projectile-enable-caching t)
+  (setq shell-file-name "/bin/sh")
 
   ;; Unused for now...
 
