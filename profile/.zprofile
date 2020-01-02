@@ -68,7 +68,7 @@ function pretty_tsv {
 alias jnb='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
 alias py='python'
 alias py2='python2'
-alias py3='python3'
+alias py3='python3.7'
 
 # Colored list directory
 alias grep='grep --color=auto'
@@ -94,11 +94,12 @@ alias N='nautilus --no-desktop&'
 alias roscoresim='roscore &; sleep 4s &&  rosparam set use_sim_time true && fg'
 alias roskill='~/cruise/ros/scripts/stop_ros.sh'
 alias cruise='cd ~/cruise'
+alias vivarium='cd ~/vivarium'
 alias ans="cd ~/cruise/setup;./run_ansible.sh"
 export ANSIBLE_COW_SELECTION=random
 
 # CUDA
-export LD_LIBRARY_PATH=/usr/local/cuda-9.0/extras/CUPTI/lib64/:/usr/local/cuda/extras/CUPTI/lib64/$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/extras/CUPTI/lib64/:$LD_LIBRARY_PATH
 # export PATH=$PATH:/usr/local/cuda/bin
 
 # Google cloud
@@ -114,20 +115,34 @@ alias grsync='gsutil -m rsync'
 alias gdu='gsutil -m du -sch'
 
 # Enable [] in pip
-alias pip='noglob pip'
+# alias pip='noglob pip'
 
 # For running circle jobs
-export CIRCLE_TOKEN=46c08a4cee823b3b980c8579e269d95c8254264b
 export KUBECONFIG=~/.kube/config.d/$(whoami).conf
 
 # Pointnet
 alias pointnet='cd ~/frustum-pointnets'
 
 # Segmark server
-alias segmark='cd ~/segmark/bag_data'
+# alias segmark='cd ~/segmark/bag_data'
 
 # # Powerline on mac
 # source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 
 # Vivarium login
 export VAULT_ADDR=https://vault.secure.car:8200 # Add to your shell
+
+# Koen's docker rviz
+xhost +local:docker > /dev/null
+DOCKER_COMMON_ARGS="--gpus all --env=DISPLAY --env=XDG_RUNTIME_DIR --env=QT_X11_NO_MITSHM=1 --device=/dev/dri:/dev/dri -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /etc/localtime:/etc/localtime:ro"
+
+
+# Cruise tune
+# export USER="will.xie"
+# export CRUISETUNE_DOMAIN="dev"
+# export CRUISETUNE_VERSION_TAG="wx"
+
+# Import API tokens
+if [ -f ~/.secrets]; then
+    . ~/.secrets
+fi
