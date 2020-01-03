@@ -143,6 +143,6 @@ DOCKER_COMMON_ARGS="--gpus all --env=DISPLAY --env=XDG_RUNTIME_DIR --env=QT_X11_
 # export CRUISETUNE_VERSION_TAG="wx"
 
 # Import API tokens
-if [ -f ~/.secrets]; then
+if [[ -f ~/.secrets ]]; then
     . ~/.secrets
 fi
