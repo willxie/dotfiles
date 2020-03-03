@@ -136,8 +136,10 @@ bless-refind () {
 export VAULT_ADDR=https://vault.secure.car:8200 # Add to your shell
 
 # Koen's docker rviz
-xhost +local:docker > /dev/null
-DOCKER_COMMON_ARGS="--gpus all --env=DISPLAY --env=XDG_RUNTIME_DIR --env=QT_X11_NO_MITSHM=1 --device=/dev/dri:/dev/dri -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /etc/localtime:/etc/localtime:ro"
+if  type xhost > /dev/null; then
+    xhost +local:docker > /dev/null
+    DOCKER_COMMON_ARGS="--gpus all --env=DISPLAY --env=XDG_RUNTIME_DIR --env=QT_X11_NO_MITSHM=1 --device=/dev/dri:/dev/dri -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /etc/localtime:/etc/localtime:ro"
+fi
 
 # Import API tokens
 if [[ -f ~/.secrets ]]; then
