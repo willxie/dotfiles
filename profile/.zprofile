@@ -124,3 +124,9 @@ alias segmark='cd ~/segmark/bag_data'
 
 # # Powerline on mac
 # source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+
+# Bless refind
+bless-refind () {
+    sudo mkdir /Volumes/ESP && sudo mount -t msdos /dev/disk0s1 /Volumes/ESP;
+    sudo bless --mount /Volumes/ESP --setBoot --file /Volumes/ESP/EFI/refind/refind_x64.efi --shortform;
+}
