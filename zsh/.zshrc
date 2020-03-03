@@ -110,7 +110,7 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 source ~/.zprofile
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/wxie/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then . '/Users/wxie/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
+if [ -f '/home/wxie/google-cloud-sdk/path.zsh.inc' ]; then . '/home/wxie/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/wxie/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then . '/Users/wxie/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi
+if [ -f '/home/wxie/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/wxie/google-cloud-sdk/completion.zsh.inc'; fi
