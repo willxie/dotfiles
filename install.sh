@@ -18,11 +18,9 @@ echo $MODULES
 # Backup
 echo -n "Creating $OLD_DOT_DIR to store backup of dotfiles in ~/ ..."
 mkdir -p $OLD_DOT_DIR
-echo "Done."
 
 echo -n "cd to $DOT_DIR.. "
 cd $DOT_DIR
-echo "Done."
 
 for MODULE in $MODULES; do
     cd $DOT_DIR/$MODULE
