@@ -123,24 +123,23 @@ export KUBECONFIG=~/.kube/config.d/$(whoami).conf
 # Pointnet
 alias pointnet='cd ~/frustum-pointnets'
 
-# Segmark server
-# alias segmark='cd ~/segmark/bag_data'
-
 # # Powerline on mac
 # source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+
+# Bless refind
+bless-refind () {
+    sudo mkdir /Volumes/ESP && sudo mount -t msdos /dev/disk0s1 /Volumes/ESP;
+    sudo bless --mount /Volumes/ESP --setBoot --file /Volumes/ESP/EFI/refind/refind_x64.efi --shortform;
+}
 
 # Vivarium login
 export VAULT_ADDR=https://vault.secure.car:8200 # Add to your shell
 
 # Koen's docker rviz
-xhost +local:docker > /dev/null
-DOCKER_COMMON_ARGS="--gpus all --env=DISPLAY --env=XDG_RUNTIME_DIR --env=QT_X11_NO_MITSHM=1 --device=/dev/dri:/dev/dri -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /etc/localtime:/etc/localtime:ro"
-
-
-# Cruise tune
-# export USER="will.xie"
-# export CRUISETUNE_DOMAIN="dev"
-# export CRUISETUNE_VERSION_TAG="wx"
+if  type xhost > /dev/null; then
+    xhost +local:docker > /dev/null
+    DOCKER_COMMON_ARGS="--gpus all --env=DISPLAY --env=XDG_RUNTIME_DIR --env=QT_X11_NO_MITSHM=1 --device=/dev/dri:/dev/dri -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /etc/localtime:/etc/localtime:ro"
+fi
 
 # Import API tokens
 if [[ -f ~/.secrets ]]; then
