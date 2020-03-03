@@ -101,12 +101,6 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 # Fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/wxie/google-cloud-sdk/path.zsh.inc' ]; then . '/home/wxie/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/wxie/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/wxie/google-cloud-sdk/completion.zsh.inc'; fi
-
 # Bazel auto complete
 fpath[1,0]=~/.zsh/completion/
 zstyle ':completion:*' use-cache on
@@ -114,3 +108,9 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 # Shell invariant settings
 source ~/.zprofile
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/wxie/Downloads/google-cloud-sdk 2/path.zsh.inc' ]; then . '/Users/wxie/Downloads/google-cloud-sdk 2/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/wxie/Downloads/google-cloud-sdk 2/completion.zsh.inc' ]; then . '/Users/wxie/Downloads/google-cloud-sdk 2/completion.zsh.inc'; fi
