@@ -28,7 +28,7 @@ fi
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux
     # Emacsclient and disown
-    ec() { emacsclient "$@" &! }
+    function ec() { emacsclient "$@" &! }
 
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
