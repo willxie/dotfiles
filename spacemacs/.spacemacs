@@ -560,16 +560,9 @@ before packages are loaded."
   (which-function-mode)
   (setq-default header-line-format
                 '((which-func-mode ("" which-func-format " "))))
-  ;; '(browse-at-remote-remote-type-domains
-  ;;    (quote
-  ;;     (("bitbucket.org" . "bitbucket")
-  ;;      ("github.com" . "github")
-  ;;      ("gitlab.com" . "gitlab")
-  ;;      ("git.savannah.gnu.org" . "gnu")
-  ;;      ("gist.github.com" . "gist")
-  ;;      ("git.sr.ht" . "sourcehut")
-  ;;      ("github.robot.car" . "github"))))
-  ;; '(evil-want-Y-yank-to-eol nil)
+  (custom-set-faces
+   '(default ((t (:background nil))))
+   '(which-func ((t (:foreground "yellow")))))
 
   ;; Unused for now...
 
