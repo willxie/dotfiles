@@ -95,6 +95,7 @@ alias roscoresim='roscore &; sleep 4s &&  rosparam set use_sim_time true && fg'
 alias roskill='~/cruise/ros/scripts/stop_ros.sh'
 alias cruise='cd ~/cruise'
 alias vivarium='cd ~/vivarium'
+alias robotorch='cd ~/robotorch'
 alias ans="cd ~/cruise/setup;./run_ansible.sh"
 export ANSIBLE_COW_SELECTION=random
 

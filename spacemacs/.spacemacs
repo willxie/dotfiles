@@ -550,7 +550,26 @@ before packages are loaded."
 
   (setq shell-file-name "/bin/sh")
 
+  ;; Yank over ssh
   (global-clipetty-mode)
+
+  ;; Fill column to indicator to 99
+  (setq fill-column 99)
+
+  ;; Show the current function name in the header line
+  (which-function-mode)
+  (setq-default header-line-format
+                '((which-func-mode ("" which-func-format " "))))
+  ;; '(browse-at-remote-remote-type-domains
+  ;;    (quote
+  ;;     (("bitbucket.org" . "bitbucket")
+  ;;      ("github.com" . "github")
+  ;;      ("gitlab.com" . "gitlab")
+  ;;      ("git.savannah.gnu.org" . "gnu")
+  ;;      ("gist.github.com" . "gist")
+  ;;      ("git.sr.ht" . "sourcehut")
+  ;;      ("github.robot.car" . "github"))))
+  ;; '(evil-want-Y-yank-to-eol nil)
 
   ;; Unused for now...
 
