@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Disable share history
-unsetopt share_history
+# unsetopt share_history
 
 # Reload global history
 fc -R
