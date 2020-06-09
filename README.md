@@ -3,7 +3,7 @@
 To install:
 
 ```
-./install 
+./install
 ```
 
 OS specific options can be appended to the above line. E.g.:
@@ -14,5 +14,5 @@ OS specific options can be appended to the above line. E.g.:
 
 MacOS example:
 ```
-./install.sh profile spacemacs tmuxvim zsh
+./install.sh gitconfig profile spacemacs tmuxvim zsh
 ```
