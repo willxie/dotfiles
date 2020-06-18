@@ -1,5 +1,5 @@
 {
-  "settingsVersion": "1.64",
+  "settingsVersion": "1.66",
   "exclusionRules": [
     {
       "pattern": "https?://mail.google.com/*",
@@ -16,12 +16,28 @@
     {
       "pattern": "https://gulp.getcruise.com/*",
       "passKeys": ""
+    },
+    {
+      "pattern": "https?://wxie-dt-01:8888/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://wxie-dt-01:8888/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://10.70.40.135:8888/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://6672a557639a7c43-dot-us-west1.notebooks.googleusercontent.com/lab",
+      "passKeys": "*"
     }
   ],
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "# Insert your preferred key mappings here.\nunmap o\nunmap r\nunmap t\nunmap /\nunmap i\nunmap yy\nunmap b\nunmap B\n\nmap b scrollFullPageUp\nmap space scrollFullPageDown\n\nmap H previousTab\nmap L nextTab\nmap  J goBack\nmap  K goForward",
+  "keyMappings": "# Insert your preferred key mappings here.\nunmap o\nunmap r\nunmap t\nunmap /\nunmap i\nunmap yy\nunmap b\nunmap B\nunmap x\n\nmap b scrollFullPageUp\nmap space scrollFullPageDown\n\nmap H previousTab\nmap L nextTab\nmap  J goBack\nmap  K goForward",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
