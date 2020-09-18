@@ -759,11 +759,13 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>64 291 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 250 1026 627 0 0 1920 1057 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 250 1026 627 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>708 132 1041 627 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>197 47 1026 627 0 0 1440 877 </string>
+	<string>4 82 1026 627 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>101 14 1026 627 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1390,14 +1392,14 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.0</string>
+		<string>3.3.4</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.7</string>
 		<string>3.3.9</string>
-		<string>3.2.9</string>
+		<string>3.3.0</string>
 		<string>3.3.2</string>
-		<string>3.3.4</string>
+		<string>3.2.9</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -1413,7 +1415,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>577731554.82774997</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>27</integer>
+	<integer>62</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2206,7 +2208,7 @@
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SoundForEsc</key>
