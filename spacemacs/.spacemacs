@@ -526,6 +526,7 @@ before packages are loaded."
   ;; (add-hook 'python-mode-hook 'yapf-mode)
   (setq py-autopep8-options '("--max-line-length=120"))
   (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+  ;; (remove-hook  'python-mode-hook 'py-autopep8-enable-on-save t)
 
   ;; Cuda mode
   (use-package cuda-mode
