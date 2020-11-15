@@ -385,5 +385,4 @@ See `comment-region' for behavior of a prefix arg."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (cuda-mode protobuf-mode py-autopep8 clang-format railscasts-theme use-package))))
+   '(cuda-mode protobuf-mode py-autopep8 clang-format railscasts-theme use-package)))
