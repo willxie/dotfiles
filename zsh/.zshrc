@@ -94,8 +94,6 @@ source $ZSH/oh-my-zsh.sh
 # Reload global history
 fc -R
 
-alias zshrc='source ~/.zshrc'
-
 # virtual env
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 
@@ -111,7 +109,7 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 source ~/.zprofile
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/wxie/google-cloud-sdk/path.zsh.inc' ]; then . '/home/wxie/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/will.xie/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/will.xie/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/wxie/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/wxie/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/will.xie/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/will.xie/google-cloud-sdk/completion.zsh.inc'; fi

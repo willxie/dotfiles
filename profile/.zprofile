@@ -45,6 +45,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
     # Homebrew
     alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+
+    # GoogleCloud and python3.8 compatibility issues
+    export CLOUDSDK_PYTHON=/usr/bin/python2.7
 else
     echo "OS type unknown, shell setup could be bad"
 fi
@@ -69,6 +72,8 @@ alias jnb='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
 alias py='python'
 alias py2='python2'
 alias py3='python3.7'
+alias zshrc='source ~/.zshrc'
+
 
 # Colored list directory
 alias grep='grep --color=auto'
