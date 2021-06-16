@@ -1,12 +1,24 @@
 [user]
-        name = Will Xie
+	name = Will Xie
 	email = williamgxie@gmail.com
 [core]
-        editor = vim
+	editor = vim
 [push]
-        default = simple
+	default = simple
 [filter "lfs"]
-        clean = git-lfs clean -- %f
-        smudge = git-lfs smudge -- %f
-        process = git-lfs filter-process
-        required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	st = status --short -uno
+  ci = commit
+  ca = commit --amend
+  caa = commit -a --amend
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p --pretty=fuller --abbrev-commit
+  lgg = log --pretty=fuller --abbrev-commit --stat
+  up = pull --rebase
+  latest = log @^{/RELEASE-NOTES:.synced}..
