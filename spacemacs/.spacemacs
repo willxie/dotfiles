@@ -93,7 +93,7 @@ This function should only modify configuration layer settings."
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
                                       cuda-mode
-                                      bazel-mode
+                                      bazel
                                       railscasts-reloaded-theme
                                       py-autopep8
                                       browse-at-remote
