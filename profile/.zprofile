@@ -95,7 +95,8 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # Nautilus without annoying desktop
 alias N='nautilus --no-desktop&'
 
-[ -s /home/wxie/cruise/setup/../ros/scripts/run_setup.sh ] && . /home/wxie/cruise/setup/../ros/scripts/run_setup.sh
+# Ros stuff
+[ -s ~/cruise/setup/../ros/scripts/run_setup.sh ] && . ~/cruise/setup/../ros/scripts/run_setup.sh
 alias roscoresim='roscore &; sleep 4s &&  rosparam set use_sim_time true && fg'
 alias roskill='~/cruise/ros/scripts/stop_ros.sh'
 alias cruise='cd ~/cruise'
@@ -109,7 +110,11 @@ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/extras/CUPTI/lib64/:$LD_LIBRARY_PATH
 # export PATH=$PATH:/usr/local/cuda/bin
 
 # Google cloud
-# export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/segmentation-training-539ed1f38bb6.json
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
+# The next line enables shell command completion for gcloud.
+if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
+
 export BOTO_CONFIG='~/.config/gcloud/legacy_credentials/will.xie@getcruise.com/.boto'
 alias gls='gsutil -m ls'
 alias gll='gsutil -m ls'
@@ -139,7 +144,7 @@ bless-refind () {
 }
 
 # Vivarium login
-export VAULT_ADDR=https://vault.secure.car:8200 # Add to your shell
+export VAULT_ADDR="https://vault.secure.car:8200"
 
 # Koen's docker rviz
 if  type xhost > /dev/null; then
