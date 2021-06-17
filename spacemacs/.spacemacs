@@ -57,7 +57,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      ;; semantic
      ;; extra-langs
-     lsp ;; Python Language Server
+     ;; lsp ;; Python Language Server
 
      ;; Env
      docker
@@ -285,7 +285,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil then the last auto saved layouts are resumed automatically upon
    ;; start. (default nil)
-   dotspacemacs-auto-resume-layouts nil
+   dotspacemacs-auto-resume-layouts t
 
    ;; If non-nil, auto-generate layout name when creating new layouts. Only has
    ;; effect when using the "jump to layout by number" commands. (default nil)
@@ -417,7 +417,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
 
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `rg', `ag', `pt', `ack' and `grep'.
@@ -576,13 +576,6 @@ before packages are loaded."
   ;; Don't display docs in LSP popups, they're distracting
   (setq lsp-ui-doc-enable nil)
   (setq lsp-ui-sideline-enable nil)
-
-  ;; '(browse-at-remote-remote-type-regexps '(("^github\\.robot\\.car$" . "github")))
-  ;; (add-to-list 'browse-at-remote-remote-type-regexps '("^github\\.robot\\.car$" . "github"))
-
-
-  ;; Latex use company instead of LSP
-  ;; (latex :variables latex-backend 'company-auctex)
 
   ;; Unused for now...
 
