@@ -140,6 +140,8 @@ bless-refind () {
 
 # Vivarium login
 export VAULT_ADDR=https://vault.secure.car:8200 # Add to your shell
+export CLOUDSDK_PYTHON=$(which python3)
+
 
 # Koen's docker rviz
 if  type xhost > /dev/null; then
