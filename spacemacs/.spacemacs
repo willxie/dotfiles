@@ -57,7 +57,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      ;; semantic
      ;; extra-langs
-     ;; lsp ;; Python Language Server
+     lsp ;; Python Language Server
 
      ;; Env
      docker
