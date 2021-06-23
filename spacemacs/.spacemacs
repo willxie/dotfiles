@@ -55,6 +55,9 @@ This function should only modify configuration layer settings."
      html
      markdown
      emacs-lisp
+     vue
+     latex
+     spell-checking
      ;; semantic
      ;; extra-langs
      lsp ;; Python Language Server
@@ -80,8 +83,6 @@ This function should only modify configuration layer settings."
      ;; syntax-checking
      ;; version-control
      themes-megapack
-
-     latex
      )
 
    ;; List of additional packages that will be installed without being
