@@ -115,5 +115,3 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 # Shell invariant settings
 source ~/.zprofile
 
-# Added by Amplify CLI binary installer
-export PATH="$HOME/.amplify/bin:$PATH"

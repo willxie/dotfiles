@@ -87,65 +87,9 @@ mkdircd ()
 
 ag-replace() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
 
-# Golang
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+alias fu=fileutil
 
-# Nautilus without annoying desktop
-alias N='nautilus --no-desktop&'
-
-# Ros stuff
-[ -s ~/cruise/setup/../ros/scripts/run_setup.sh ] && . ~/cruise/setup/../ros/scripts/run_setup.sh
-alias roscoresim='roscore &; sleep 4s &&  rosparam set use_sim_time true && fg'
-alias roskill='~/cruise/ros/scripts/stop_ros.sh'
-alias cruise='cd ~/cruise'
-alias vivarium='cd ~/vivarium'
-alias robotorch='cd ~/robotorch'
-alias ans="cd ~/cruise/setup;./run_ansible.sh"
-export ANSIBLE_COW_SELECTION=random
-
-# CUDA
-export LD_LIBRARY_PATH=/usr/local/cuda-9.0/extras/CUPTI/lib64/:$LD_LIBRARY_PATH
-# export PATH=$PATH:/usr/local/cuda/bin
-
-# Google cloud
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
-# The next line enables shell command completion for gcloud.
-if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
-
-export BOTO_CONFIG='~/.config/gcloud/legacy_credentials/will.xie@getcruise.com/.boto'
-alias gls='gsutil -m ls'
-alias gll='gsutil -m ls'
-alias grm='gsutil -m rm'
-alias gmv='gsutil -m mv'
-alias gcp='gsutil -m  cp'
-alias gcat='gsutil -m cat'
-alias grsync='gsutil -m rsync'
-alias gdu='gsutil -m du -sch'
-
-# Enable [] in pip
-# alias pip='noglob pip'
-
-# For running circle jobs
-export KUBECONFIG=~/.kube/config.d/$(whoami).conf
-
-# Pointnet
-alias pointnet='cd ~/frustum-pointnets'
-
-# # Powerline on mac
-# source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
-
-# Bless refind
-bless-refind () {
-    sudo mkdir /Volumes/ESP && sudo mount -t msdos /dev/disk0s1 /Volumes/ESP;
-    sudo bless --mount /Volumes/ESP --setBoot --file /Volumes/ESP/EFI/refind/refind_x64.efi --shortform;
-}
-
-# Vivarium login
-export VAULT_ADDR="https://vault.secure.car:8200"
-export CLOUDSDK_PYTHON=$(which python3)
+source /etc/bash_completion.d/hgd 
 
 # Koen's docker rviz
 if  type xhost > /dev/null; then
