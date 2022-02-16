@@ -114,4 +114,3 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 # Shell invariant settings
 source ~/.zprofile
-

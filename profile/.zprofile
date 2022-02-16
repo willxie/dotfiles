@@ -11,18 +11,6 @@
 if [ -n "$BASH_VERSION" ]; then
    exit 1
 fi
-# # if running bash
-# if [ -n "$BASH_VERSION" ]; then
-#     # include .bashrc if it exists
-#     if [ -f "$HOME/.bashrc" ]; then
-# 	. "$HOME/.bashrc"
-#     fi
-# fi
-
-# # set PATH so it includes user's private bin if it exists
-# if [ -d "$HOME/bin" ] ; then
-#     PATH="$HOME/bin:$PATH"
-# fi
 
 # Do OS specific things
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
@@ -30,24 +18,17 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Emacsclient and disown
     function ec() { emacsclient "$@" &! }
 
-
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OSX
     alias emacs='open -a /Applications/Emacs.app $1'
     alias ec='open -a /Applications/Emacs.app $1'
-    # alias ec='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
 
     # Compile
-    # alias gcc='/usr/local/bin/gcc-6 -std=c++11'
-    # alias g++='/usr/local/bin/g++-6 -std=c++11'
     # alias gccc='/usr/local/bin/gcc-6 -std=c++11 -Werror -Wall -Wextra'
     # alias g+++='/usr/local/bin/g++-6 -std=c++11 -Werror -Wall -Wextra'
 
     # Homebrew
     alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
-
-    # GoogleCloud and python3.8 compatibility issues
-    export CLOUDSDK_PYTHON=/usr/bin/python2.7
 else
     echo "OS type unknown, shell setup could be bad"
 fi
@@ -71,7 +52,7 @@ function pretty_tsv {
 alias jnb='jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000'
 alias py='python'
 alias py2='python2'
-alias py3='python3.7'
+alias py3='python3'
 alias zshrc='source ~/.zshrc'
 
 
@@ -87,9 +68,13 @@ mkdircd ()
 
 ag-replace() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
 
+# G stuff
 alias fu=fileutil
 
-source /etc/bash_completion.d/hgd 
+if [ -f "/etc/bash_completion.d/hgd" ]; then
+  source /etc/bash_completion.d/hgd
+fi
+
 
 # Koen's docker rviz
 if  type xhost > /dev/null; then
