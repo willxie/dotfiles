@@ -60,7 +60,7 @@ This function should only modify configuration layer settings."
      spell-checking
      ;; semantic
      ;; extra-langs
-     lsp ;; Python Language Server
+     ;; lsp ;; Python Language Server
 
      ;; Env
      docker

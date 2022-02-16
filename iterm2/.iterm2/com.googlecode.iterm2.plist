@@ -4,6 +4,8 @@
 <dict>
 	<key>AllowClipboardAccess</key>
 	<true/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>ApplePressAndHoldEnabled</key>
@@ -759,13 +761,17 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>64 291 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 250 1026 627 0 0 1440 877 </string>
+	<string>0 0 1440 875 0 0 1440 875 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>708 132 1041 627 0 0 2560 1417 </string>
+	<string>348 103 1026 633 0 0 1440 875 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>4 82 1026 627 0 0 1440 877 </string>
+	<string>81 85 1026 633 0 0 1440 875 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>101 14 1026 627 0 0 1440 877 </string>
+	<string>205 242 1041 633 0 0 1440 875 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>-2508 949 1041 633 -2560 167 2560 1415 </string>
+	<key>NSWindow Frame iTerm Window 5</key>
+	<string>-2093 228 1041 633 -2560 167 2560 1415 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1397,9 +1403,9 @@
 		<string>3.3.3</string>
 		<string>3.3.7</string>
 		<string>3.3.9</string>
-		<string>3.3.0</string>
-		<string>3.3.2</string>
 		<string>3.2.9</string>
+		<string>3.3.2</string>
+		<string>3.3.0</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -1415,7 +1421,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>577731554.82774997</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>62</integer>
+	<integer>218</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
