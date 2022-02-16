@@ -91,7 +91,8 @@ defaults write com.apple.dock autohide-time-modifier -float 0.15
 killall Dock
 ```
 
-#####################################################################
+## Additional manual installs
+```
 Appstore:
 Helium
 WriteRoom
@@ -112,3 +113,4 @@ cd /System/Library/PrivateFrameworks/AmbientDisplay.framework/Versions/A/XPCServ
 sudo mv com.apple.AmbientDisplayAgent _com.apple.AmbientDisplayAgent
 # Enable SIP
 # Reboot
+```
