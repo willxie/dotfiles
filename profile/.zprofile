@@ -28,7 +28,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # alias g+++='/usr/local/bin/g++-6 -std=c++11 -Werror -Wall -Wextra'
 
     # Homebrew
-    alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+    alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 else
     echo "OS type unknown, shell setup could be bad"
 fi
