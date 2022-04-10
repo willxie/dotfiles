@@ -1,37 +1,17 @@
 {
-  "settingsVersion": "1.66",
+  "settingsVersion": "1.67",
   "exclusionRules": [
     {
       "pattern": "https?://mail.google.com/*",
       "passKeys": ""
     },
     {
-      "pattern": "https?://www.youtube.com/*",
-      "passKeys": "*"
+      "pattern": "https?://www.youtube.com/watch*",
+      "passKeys": ""
     },
     {
       "pattern": "https?://localhost*",
       "passKeys": ""
-    },
-    {
-      "pattern": "https://gulp.getcruise.com/*",
-      "passKeys": ""
-    },
-    {
-      "pattern": "https?://wxie-dt-01:8888/*",
-      "passKeys": ""
-    },
-    {
-      "pattern": "https?://wxie-dt-01:8888/*",
-      "passKeys": ""
-    },
-    {
-      "pattern": "https?://10.70.40.135:8888/*",
-      "passKeys": ""
-    },
-    {
-      "pattern": "https://6672a557639a7c43-dot-us-west1.notebooks.googleusercontent.com/lab",
-      "passKeys": "*"
     }
   ],
   "filterLinkHints": false,
