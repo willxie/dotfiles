@@ -70,11 +70,9 @@ ag-replace() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
 
 # G stuff
 alias fu=fileutil
-
 if [ -f "/etc/bash_completion.d/hgd" ]; then
   source /etc/bash_completion.d/hgd
 fi
-
 
 # Koen's docker rviz
 if  type xhost > /dev/null; then
@@ -86,3 +84,4 @@ fi
 if [[ -f ~/.secrets ]]; then
     . ~/.secrets
 fi
+eval "$(/opt/homebrew/bin/brew shellenv)"

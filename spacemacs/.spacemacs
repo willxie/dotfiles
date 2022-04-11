@@ -57,7 +57,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      vue
      latex
-     spell-checking
+     ;; spell-checking
      ;; semantic
      ;; extra-langs
      ;; lsp ;; Python Language Server
