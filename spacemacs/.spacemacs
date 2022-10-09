@@ -60,7 +60,7 @@ This function should only modify configuration layer settings."
      ;; spell-checking
      ;; semantic
      ;; extra-langs
-     ;; lsp ;; Python Language Server
+     lsp ;; Python Language Server
 
      ;; Env
      docker
@@ -74,7 +74,7 @@ This function should only modify configuration layer settings."
      ;; git
      ;; markdown
      multiple-cursors
-     neotree
+    neotree
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -575,8 +575,26 @@ before packages are loaded."
    '(which-func ((t (:foreground "yellow")))))
 
   ;; Don't display docs in LSP popups, they're distracting
+  ;; Ref: https://emacs-lsp.github.io/lsp-mode/tutorials/how-to-turn-off/
   (setq lsp-ui-doc-enable nil)
   (setq lsp-ui-sideline-enable nil)
+  (setq lsp-ui-doc-show-with-cursor nil)
+  (setq lsp-ui-doc-show-with-mouse nil)
+  (setq lsp-lens-enable nil)
+  ;; (setq lsp-headerline-breadcrumb-enable nil)
+  (setq lsp-ui-sideline-enable nil)
+  (setq lsp-ui-sideline-enable nil)
+  (setq lsp-modeline-code-actions-enable nil)
+  (setq lsp-diagnostics-provider :none)
+  (setq lsp-ui-sideline-enable nil)
+  (setq lsp-ui-sideline-show-diagnostics nil)
+  (setq lsp-eldoc-enable-hover nil)
+  (setq lsp-modeline-diagnostics-enable nil)
+  (setq lsp-signature-auto-activate nil) ;; you could manually request them via `lsp-signature-activate`
+  (setq lsp-signature-render-documentation nil)
+
+
+
 
   ;; Unused for now...
 
@@ -648,7 +666,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:background nil))))
+ '(highlight-parentheses-highlight ((nil (:weight ultra-bold))) t)
  '(which-func ((t (:foreground "yellow")))))
 )
 (custom-set-variables
