@@ -1610,3 +1610,245 @@
 2022-10-22 14:30:56,429 - DEBUG - [MainThread] cura.Machines.Models.CustomQualityProfilesDropDownMenuModel._update [33]: Updating CustomQualityProfilesDropDownMenuModel.
 2022-10-22 14:30:57,259 - INFO - [JobQueueWorker [1]] SettingsGuide2.CuraSettingsGuide.load_all [179]: Finished loading Settings Guide articles.
 2022-10-22 14:31:05,042 - DEBUG - [MainThread] cura.AutoSave._onTimeout [64]: Autosaving preferences, instances and profiles took 0.0725090503692627 seconds
+2022-10-22 15:34:49,505 - INFO - [MainThread] UM.Qt.QtApplication.__init__ [98]: Adding QT5 plugin path: /Applications/Ultimaker-Cura.app/Contents/Resources/plugins
+2022-10-22 15:34:49,506 - DEBUG - [MainThread] UM.Application.initialize [161]: Initializing Ultimaker Cura
+2022-10-22 15:34:49,506 - DEBUG - [MainThread] UM.Application.initialize [162]: App Version 5.1.1
+2022-10-22 15:34:49,506 - DEBUG - [MainThread] UM.Application.initialize [163]: Api Version 8.1.0
+2022-10-22 15:34:49,506 - DEBUG - [MainThread] UM.Application.initialize [164]: Build type None
+2022-10-22 15:34:49,506 - WARNING - [MainThread] UM.PluginRegistry.addPluginLocation [202]: Plugin location /Applications/Ultimaker-Cura.app/Contents/lib/uranium must be a folder.
+2022-10-22 15:34:49,506 - WARNING - [MainThread] UM.PluginRegistry.addPluginLocation [202]: Plugin location /Applications/Ultimaker-Cura.app/Contents/lib64/uranium must be a folder.
+2022-10-22 15:34:49,507 - WARNING - [MainThread] UM.PluginRegistry.addPluginLocation [202]: Plugin location /Applications/Ultimaker-Cura.app/Contents/lib32/uranium must be a folder.
+2022-10-22 15:34:49,507 - WARNING - [MainThread] UM.PluginRegistry.addPluginLocation [202]: Plugin location /Applications/Ultimaker-Cura.app/Contents/MacOS/plugins must be a folder.
+2022-10-22 15:34:49,507 - WARNING - [MainThread] UM.PluginRegistry.addPluginLocation [202]: Plugin location /Applications/Ultimaker-Cura.app/Contents/Resources/uranium/plugins must be a folder.
+2022-10-22 15:34:49,507 - WARNING - [MainThread] UM.PluginRegistry.addPluginLocation [202]: Plugin location /Applications/Ultimaker-Cura.app/Contents/Resources/cura/plugins must be a folder.
+2022-10-22 15:34:49,507 - DEBUG - [MainThread] UM.Resources.__initializeStoragePaths [481]: Initializing storage paths
+2022-10-22 15:34:49,507 - DEBUG - [MainThread] UM.Resources.__initializeStoragePaths [491]: Config storage path is /Users/wxie/Library/Application Support/cura/5.1
+2022-10-22 15:34:49,507 - DEBUG - [MainThread] UM.Resources.__initializeStoragePaths [499]: Data storage path is /Users/wxie/Library/Application Support/cura/5.1
+2022-10-22 15:34:49,507 - DEBUG - [MainThread] UM.Resources.__initializeStoragePaths [511]: Cache storage path is /Users/wxie/Library/Application Support/cura/5.1/cache
+2022-10-22 15:34:49,507 - INFO - [MainThread] UM.PackageManager.__init__ [56]: Found bundled packages JSON file: /Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/bundled_packages/cura.json
+2022-10-22 15:34:49,507 - INFO - [MainThread] UM.PackageManager.__init__ [56]: Found bundled packages JSON file: /Applications/Ultimaker-Cura.app/Contents/MacOS/share/uranium/resources/bundled_packages/uranium.json
+2022-10-22 15:34:49,507 - DEBUG - [MainThread] UM.View.GL.OpenGLContext.detectBestOpenGLVersion [124]: Trying OpenGL context 4.1...
+2022-10-22 15:34:49,507 - DEBUG - [MainThread] UM.View.GL.OpenGLContext.detectBestOpenGLVersion [132]: Yay, we got at least OpenGL 4.1 core: 4.1 Core profile
+2022-10-22 15:34:49,508 - DEBUG - [MainThread] UM.View.GL.OpenGLContext.detectBestOpenGLVersion [178]: OpenGL renderer type for this OpenGL version: Intel(R) Iris(TM) Plus Graphics 655
+2022-10-22 15:34:49,508 - DEBUG - [MainThread] UM.Qt.QtApplication.initialize [191]: Detected most suitable OpenGL context version: 4.1 Core profile
+2022-10-22 15:34:49,508 - INFO - [MainThread] UM.Qt.QtApplication.initialize [198]: Initializing job queue ...
+2022-10-22 15:34:49,508 - INFO - [MainThread] UM.Qt.QtApplication.initialize [202]: Initializing version upgrade manager ...
+2022-10-22 15:34:49,508 - INFO - [MainThread] UM.PackageManager._loadManagementData [174]: Loaded bundled packages data from /Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/bundled_packages/cura.json
+2022-10-22 15:34:49,508 - INFO - [MainThread] UM.PackageManager._loadManagementData [174]: Loaded bundled packages data from /Applications/Ultimaker-Cura.app/Contents/MacOS/share/uranium/resources/bundled_packages/uranium.json
+2022-10-22 15:34:49,508 - INFO - [MainThread] UM.PackageManager._loadManagementData [201]: Loaded user packages management file from /Users/wxie/Library/Application Support/cura/5.1/packages.json
+2022-10-22 15:34:49,508 - INFO - [MainThread] UM.PackageManager._removeAllScheduledPackages [280]: Attempting to remove the following scheduled packages: - 
+2022-10-22 15:34:49,508 - INFO - [MainThread] UM.PluginRegistry.initializeBeforePluginsAreLoaded [121]: Loading plugin configuration file '/Users/wxie/Library/Application Support/cura/5.1/plugins.json'
+2022-10-22 15:34:49,508 - WARNING - [MainThread] UM.PluginRegistry.addPluginLocation [202]: Plugin location /Applications/Ultimaker-Cura.app/Contents/lib/cura must be a folder.
+2022-10-22 15:34:49,509 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin FileLogger 1.0.1
+2022-10-22 15:34:49,517 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin SimpleView 1.0.1
+2022-10-22 15:34:49,529 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin MachineSettingsAction 1.0.1
+2022-10-22 15:34:49,542 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin ImageReader 1.0.1
+2022-10-22 15:34:49,557 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin XRayView 1.0.1
+2022-10-22 15:34:49,583 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin X3DReader 1.0.1
+2022-10-22 15:34:49,591 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin CuraProfileReader 1.0.1
+2022-10-22 15:34:49,609 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin PostProcessingPlugin 2.2.1
+2022-10-22 15:34:49,707 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin UM3NetworkPrinting 2.0.0
+2022-10-22 15:34:49,730 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin 3MFWriter 1.0.1
+2022-10-22 15:34:49,750 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin CuraDrive 1.2.0
+2022-10-22 15:34:49,766 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin SliceInfoPlugin 1.0.1
+2022-10-22 15:34:49,777 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin UFPWriter 1.0.1
+2022-10-22 15:34:49,826 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin DigitalLibrary 1.1.0
+2022-10-22 15:34:49,839 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin GCodeProfileReader 1.0.1
+2022-10-22 15:34:49,857 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin GCodeReader 1.0.1
+2022-10-22 15:34:49,869 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin TrimeshReader 1.0.0
+2022-10-22 15:34:49,879 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin UltimakerMachineActions 1.0.1
+2022-10-22 15:34:49,887 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin GCodeGzReader 1.0.1
+2022-10-22 15:34:49,968 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin Marketplace 1.0.0
+2022-10-22 15:34:49,986 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin RemovableDriveOutputDevice 1.0.1
+2022-10-22 15:34:49,992 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin MonitorStage 1.0.1
+2022-10-22 15:34:50,001 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade25to26 1.0.1
+2022-10-22 15:34:50,011 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade26to27 1.0.1
+2022-10-22 15:34:50,018 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade413to50 1.0.0
+2022-10-22 15:34:50,023 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade48to49 1.0.0
+2022-10-22 15:34:50,028 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade34to35 1.0.1
+2022-10-22 15:34:50,034 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade44to45 1.0.0
+2022-10-22 15:34:50,039 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade43to44 1.0.0
+2022-10-22 15:34:50,045 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade32to33 1.0.1
+2022-10-22 15:34:50,049 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade33to34 1.0.1
+2022-10-22 15:34:50,054 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade41to42 1.0.0
+2022-10-22 15:34:50,058 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade42to43 1.0.0
+2022-10-22 15:34:50,063 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade462to47 1.0.0
+2022-10-22 15:34:50,067 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade35to40 1.0.0
+2022-10-22 15:34:50,072 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade22to24 1.0.1
+2022-10-22 15:34:50,081 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade21to22 1.0.1
+2022-10-22 15:34:50,091 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade460to462 1.0.0
+2022-10-22 15:34:50,096 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade47to48 1.0.0
+2022-10-22 15:34:50,101 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade49to410 1.0.0
+2022-10-22 15:34:50,106 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade45to46 1.0.0
+2022-10-22 15:34:50,111 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade27to30 1.0.1
+2022-10-22 15:34:50,117 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade30to31 1.0.1
+2022-10-22 15:34:50,123 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade411to412 1.0.0
+2022-10-22 15:34:50,129 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin VersionUpgrade40to41 1.0.1
+2022-10-22 15:34:50,186 - INFO - [MainThread] CuraEngineBackend.CuraEngineBackend.__init__ [96]: Found CuraEngine at: /Applications/Ultimaker-Cura.app/Contents/MacOS/CuraEngine
+2022-10-22 15:34:50,187 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin CuraEngineBackend 1.0.1
+2022-10-22 15:34:50,196 - DEBUG - [MainThread] UM.Backend.Backend._logSocketState [188]: Socket state changed to Listening
+2022-10-22 15:34:50,207 - INFO - [MainThread] UM.Backend.Backend.startEngine [91]: Started engine process: /Applications/Ultimaker-Cura.app/Contents/MacOS/CuraEngine
+2022-10-22 15:34:50,207 - DEBUG - [MainThread] UM.Backend.Backend._backendLog [111]: [Backend] Calling engine with: ['/Applications/Ultimaker-Cura.app/Contents/MacOS/CuraEngine', 'connect', '127.0.0.1:49674', '']
+2022-10-22 15:34:50,225 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] 
+2022-10-22 15:34:50,226 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] Cura_SteamEngine version main
+2022-10-22 15:34:50,226 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] Copyright (C) 2022 Ultimaker
+2022-10-22 15:34:50,226 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] 
+2022-10-22 15:34:50,230 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] This program is free software: you can redistribute it and/or modify
+2022-10-22 15:34:50,230 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] it under the terms of the GNU Affero General Public License as published by
+2022-10-22 15:34:50,230 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] the Free Software Foundation, either version 3 of the License, or
+2022-10-22 15:34:50,230 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] (at your option) any later version.
+2022-10-22 15:34:50,232 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] 
+2022-10-22 15:34:50,233 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] This program is distributed in the hope that it will be useful,
+2022-10-22 15:34:50,233 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] but WITHOUT ANY WARRANTY; without even the implied warranty of
+2022-10-22 15:34:50,233 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+2022-10-22 15:34:50,233 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] GNU Affero General Public License for more details.
+2022-10-22 15:34:50,234 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] 
+2022-10-22 15:34:50,234 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] You should have received a copy of the GNU Affero General Public License
+2022-10-22 15:34:50,234 - DEBUG - [EngineErrorThread] UM.Backend.Backend._backendLog [111]: [Backend] along with this program.  If not, see <http://www.gnu.org/licenses/>.
+2022-10-22 15:34:50,236 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin 3MFReader 1.0.1
+2022-10-22 15:34:50,237 - DEBUG - [MainThread] UM.Backend.Backend._logSocketState [192]: Socket state changed to Connected
+2022-10-22 15:34:50,238 - DEBUG - [MainThread] UM.Backend.Backend._onSocketStateChanged [181]: Backend connected on port 49674
+2022-10-22 15:34:50,246 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin PerObjectSettingsTool 1.0.1
+2022-10-22 15:34:50,261 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin XmlMaterialProfile 1.0.1
+2022-10-22 15:34:50,266 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin CuraProfileWriter 1.0.1
+2022-10-22 15:34:50,272 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin ModelChecker 1.0.1
+2022-10-22 15:34:50,301 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin USBPrinting 1.0.2
+2022-10-22 15:34:50,306 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin PreviewStage 1.0.1
+2022-10-22 15:34:50,313 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin GCodeWriter 1.0.1
+2022-10-22 15:34:50,317 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin UFPReader 1.0.0
+2022-10-22 15:34:50,323 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin FirmwareUpdater 1.0.1
+2022-10-22 15:34:50,327 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin GCodeGzWriter 1.0.1
+2022-10-22 15:34:50,348 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin SimulationView 1.0.1
+2022-10-22 15:34:50,356 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin LegacyProfileReader 1.0.1
+2022-10-22 15:34:50,361 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin AMFReader 1.0.0
+2022-10-22 15:34:50,370 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin SolidView 1.0.1
+2022-10-22 15:34:50,379 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin FirmwareUpdateChecker 1.0.1
+2022-10-22 15:34:50,386 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin SupportEraser 1.0.1
+2022-10-22 15:34:50,390 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin PrepareStage 1.0.1
+2022-10-22 15:34:50,395 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin BarbarianPlugin 2.3.2
+2022-10-22 15:34:50,472 - DEBUG - [MainThread] ArcWelderPlugin.ArcWelderPlugin.__init__ [77]: Using ArcWelder 1.2.0
+2022-10-22 15:34:50,473 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin ArcWelderPlugin 3.6.0
+2022-10-22 15:34:50,485 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin CustomJobPrefix 3.7.0
+2022-10-22 15:34:50,499 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin ProfilAnalyser 1.2.1
+2022-10-22 15:34:50,530 - DEBUG - [MainThread] OctoPrintPlugin.OctoPrintOutputDevicePlugin.<module> [59]: Using included Zeroconf module version 0.31.0
+2022-10-22 15:34:50,543 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin OctoPrintPlugin 3.7.2
+2022-10-22 15:34:50,556 - DEBUG - [MainThread] CalibrationShapes.CalibrationShapes.__init__ [141]: Info CuraVersion --> 5.1.1
+2022-10-22 15:34:50,557 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin CalibrationShapes 2.0.1
+2022-10-22 15:34:50,796 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin SettingsGuide2 2.9.0
+2022-10-22 15:34:50,805 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin HTMLCuraSettings 2.0.1
+2022-10-22 15:34:50,810 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin ZOffsetPlugin 3.6.0
+2022-10-22 15:34:50,822 - INFO - [MainThread] UM.PluginRegistry.loadPlugin [493]: Loaded plugin MaterialSettingsPlugin 3.6.0
+2022-10-22 15:34:50,823 - DEBUG - [MainThread] UM.PluginRegistry.loadPlugins [416]: Loading all plugins took 1.6256811618804932 seconds
+2022-10-22 15:34:50,827 - INFO - [MainThread] UM.VersionUpgradeManager.upgrade [163]: Looking for old configuration files to upgrade.
+2022-10-22 15:34:50,905 - WARNING - [MainThread] UM.VersionUpgradeManager._getUpgradeTasks [334]: Failed to get file version: ../generic_pla_175+%235.xml.fdm_material, skip it
+2022-10-22 15:34:50,905 - WARNING - [MainThread] UM.VersionUpgradeManager._getUpgradeTasks [334]: Failed to get file version: ../generic_petg_175+%233.xml.fdm_material, skip it
+2022-10-22 15:34:50,905 - WARNING - [MainThread] UM.VersionUpgradeManager._getUpgradeTasks [334]: Failed to get file version: ../generic_pla_175+%234.xml.fdm_material, skip it
+2022-10-22 15:34:50,905 - WARNING - [MainThread] UM.VersionUpgradeManager._getUpgradeTasks [334]: Failed to get file version: ../generic_petg_175+%232.xml.fdm_material, skip it
+2022-10-22 15:34:50,906 - WARNING - [MainThread] UM.VersionUpgradeManager._getUpgradeTasks [334]: Failed to get file version: ../generic_pla_175+%237.xml.fdm_material, skip it
+2022-10-22 15:34:50,907 - WARNING - [MainThread] UM.VersionUpgradeManager._getUpgradeTasks [334]: Failed to get file version: ../generic_pla_175+%238.xml.fdm_material, skip it
+2022-10-22 15:34:50,907 - WARNING - [MainThread] UM.VersionUpgradeManager._getUpgradeTasks [334]: Failed to get file version: ../generic_tpu_175+%232.xml.fdm_material, skip it
+2022-10-22 15:34:50,907 - WARNING - [MainThread] UM.VersionUpgradeManager._getUpgradeTasks [334]: Failed to get file version: ../generic_pla_175+%233.xml.fdm_material, skip it
+2022-10-22 15:34:50,908 - WARNING - [MainThread] UM.VersionUpgradeManager._getUpgradeTasks [334]: Failed to get file version: ../generic_pla_175+%232.xml.fdm_material, skip it
+2022-10-22 15:34:50,908 - WARNING - [MainThread] UM.VersionUpgradeManager._getUpgradeTasks [334]: Failed to get file version: ../generic_tpu_175+%233.xml.fdm_material, skip it
+2022-10-22 15:34:50,919 - INFO - [MainThread] UM.VersionUpgradeManager.upgrade [177]: Checking and performing updates took 0.09323000907897949
+2022-10-22 15:34:50,956 - INFO - [MainThread] UM.Qt.QtApplication.startSplashWindowPhase [265]: Completed loading preferences.
+2022-10-22 15:34:50,993 - INFO - [MainThread] UM.Qt.QtApplication.startSplashWindowPhase [300]: Created system tray icon.
+2022-10-22 15:34:52,786 - DEBUG - [MainThread] UM.Settings.ContainerRegistry.loadAllMetadata [548]: Loading metadata into container registry took 1.767885684967041 seconds
+2022-10-22 15:34:52,800 - DEBUG - [MainThread] cura.Scene.CuraSceneController.setActiveBuildPlate [142]: Select build plate: 0
+2022-10-22 15:34:52,802 - INFO - [MainThread] cura.CuraApplication.run [823]: Initializing machine error checker
+2022-10-22 15:34:53,150 - WARNING - [MainThread] LocalContainerProvider.LocalContainerProvider._saveCachedDefinition [304]: The definition cache for definition creality_ender3pro failed to pickle.
+2022-10-22 15:34:53,158 - INFO - [MainThread] cura.UI.MachineActionManager.addDefaultMachineActions [74]: Default machine actions added for machine definition [creality_ender3pro]
+2022-10-22 15:34:53,462 - WARNING - [MainThread] LocalContainerProvider.LocalContainerProvider._saveCachedDefinition [304]: The definition cache for definition creality_base failed to pickle.
+2022-10-22 15:34:53,522 - INFO - [MainThread] cura.Settings.GlobalStack.addExtruder [192]: Extruder[creality_base_extruder_0 #3] added to [Creality Ender-3 v2 #2] at position [0]
+2022-10-22 15:34:53,898 - DEBUG - [MainThread] cura.Machines.ContainerTree.__getitem__ [120]: Adding container tree for creality_ender3pro took 0.37209200859069824 seconds.
+2022-10-22 15:34:53,910 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: ChangeAtZ
+2022-10-22 15:34:53,912 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: ColorMix
+2022-10-22 15:34:53,914 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: CreateThumbnail
+2022-10-22 15:34:53,916 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: DisplayFilenameAndLayerOnLCD
+2022-10-22 15:34:53,919 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: DisplayProgressOnLCD
+2022-10-22 15:34:53,920 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: FilamentChange
+2022-10-22 15:34:53,921 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: InsertAtLayerChange
+2022-10-22 15:34:53,925 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: PauseAtHeight
+2022-10-22 15:34:53,927 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: RetractContinue
+2022-10-22 15:34:53,928 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: SearchAndReplace
+2022-10-22 15:34:53,932 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: Stretch
+2022-10-22 15:34:53,934 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: TimeLapse
+2022-10-22 15:34:53,935 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: UsePreviousProbeMeasurements
+2022-10-22 15:34:53,942 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: DisplayPrintInfosOnLCD
+2022-10-22 15:34:53,944 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: FastFirstInfill
+2022-10-22 15:34:53,946 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: FlowTower
+2022-10-22 15:34:53,950 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: GCodeDocumentation
+2022-10-22 15:34:53,953 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: RetractTower
+2022-10-22 15:34:53,955 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: SpeedTower
+2022-10-22 15:34:53,956 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin.loadScripts [206]: Begin loading of script: TempFanTower
+2022-10-22 15:34:54,153 - WARNING - [MainThread] LocalContainerProvider.LocalContainerProvider._saveCachedDefinition [304]: The definition cache for definition fdmprinter failed to pickle.
+2022-10-22 15:34:54,190 - INFO - [MainThread] cura.CuraApplication.run [828]: Initializing machine manager
+2022-10-22 15:34:54,190 - INFO - [MainThread] cura.CuraApplication.run [833]: Initializing container manager
+2022-10-22 15:34:54,210 - DEBUG - [MainThread] cura.OAuth2.AuthorizationService.loadAuthDataFromPreferences [258]: Attempting to load the auth data from preferences.
+2022-10-22 15:34:54,211 - DEBUG - [JobQueueWorker [0]] UM.Mesh.MeshData.calculateNormalsFromVertices [561]: Calculating normals took 0.003529071807861328 seconds
+2022-10-22 15:34:54,223 - WARNING - [MainThread] UM.OutputDevice.OutputDeviceManager.removeOutputDevice [235]: Could not find output device with id digital_factory to remove
+2022-10-22 15:34:54,224 - DEBUG - [JobQueueWorker [0]] UM.Mesh.MeshData.approximateConvexHull [505]: approximateConvexHull(target_count=1024) Calculating 3D convex hull took 0.00838017463684082 seconds. 8 input vertices. 8 output vertices.
+2022-10-22 15:34:54,255 - DEBUG - [MainThread] cura.PrinterOutput.NetworkedPrinterOutputDevice._createNetworkManager [323]: Creating network manager
+2022-10-22 15:34:54,670 - DEBUG - [MainThread] OctoPrintPlugin.OctoPrintOutputDevice.connect [473]: Connection with instance raspberrypi with url http://192.168.50.111:5000/ started
+2022-10-22 15:34:54,720 - INFO - [MainThread] UM.OutputDevice.OutputDeviceManager.addOutputDevice [214]: Output Device raspberrypi already added
+2022-10-22 15:34:54,730 - DEBUG - [MainThread] cura.Machines.MachineErrorChecker._rescheduleCheck [156]: New error check scheduled.
+2022-10-22 15:34:54,759 - DEBUG - [MainThread] UM.Scene.Camera._preferencesChanged [252]: Changing perspective mode to orthographic.
+2022-10-22 15:34:55,117 - INFO - [MainThread] cura.Machines.MachineErrorChecker._setResult [215]: Error check finished, result = False, time = 0.4s
+2022-10-22 15:34:55,127 - DEBUG - [MainThread] UM.Qt.Bindings.Theme.load [188]: Loading theme file: /Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/themes/cura-dark/theme.json
+2022-10-22 15:34:55,130 - DEBUG - [MainThread] UM.Qt.Bindings.Theme.load [188]: Loading theme file: /Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/themes/cura-light/theme.json
+2022-10-22 15:34:55,169 - DEBUG - [zeroconf-ServiceBrowser__octoprint._tcp.local._1886909] OctoPrintPlugin.OctoPrintOutputDevicePlugin._onServiceChanged [367]: Bonjour service added: raspberrypi._octoprint._tcp.local
+2022-10-22 15:34:55,250 - DEBUG - [MainThread] UM.Qt.Bindings.Theme.load [323]: Loaded theme /Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/themes/cura-light
+2022-10-22 15:34:55,250 - INFO - [MainThread] UM.Qt.Bindings.Theme.load [324]: System's em size is 13px.
+2022-10-22 15:34:55,252 - DEBUG - [MainThread] UM.Qt.Bindings.Theme.load [323]: Loaded theme /Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/themes/cura-dark
+2022-10-22 15:34:55,253 - INFO - [MainThread] UM.Qt.Bindings.Theme.load [324]: System's em size is 13px.
+2022-10-22 15:34:55,502 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin._createView [344]: Creating post processing plugin view.
+2022-10-22 15:34:55,595 - DEBUG - [MainThread] PostProcessingPlugin.PostProcessingPlugin._createView [354]: Post processing view created.
+2022-10-22 15:34:55,769 - WARNING - [MainThread] UM.Qt.QtApplication.__onQmlWarning [442]: file:///Applications/Ultimaker-Cura.app/Contents/MacOS/PyQt6/Qt6/qml/UM/MenuItem.qml:19:5: QML Shortcut: Shortcut: Only binding to one of multiple key bindings associated with 7. Use 'sequences: [ <key> ]' to bind to all of them.
+2022-10-22 15:34:55,792 - WARNING - [MainThread] UM.Qt.QtApplication.__onQmlWarning [442]: file:///Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/qml/Settings/SettingView.qml:40:9: QML TextField: Binding loop detected for property "implicitHeight"
+2022-10-22 15:34:55,792 - WARNING - [MainThread] UM.Qt.QtApplication.__onQmlWarning [442]: file:///Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/qml/Settings/SettingView.qml:40:9: QML TextField: Binding loop detected for property "implicitHeight"
+2022-10-22 15:34:55,857 - WARNING - [MainThread] UM.Qt.QtApplication.__onQmlWarning [442]: file:///Applications/Ultimaker-Cura.app/Contents/MacOS/PyQt6/Qt6/qml/UM/MenuItem.qml:19:5: QML Shortcut: Shortcut: Only binding to one of multiple key bindings associated with 7. Use 'sequences: [ <key> ]' to bind to all of them.
+2022-10-22 15:34:56,153 - DEBUG - [MainThread] cura.Machines.Models.NozzleModel._update [28]: Updating NozzleModel.
+2022-10-22 15:34:56,375 - WARNING - [MainThread] UM.Qt.QtApplication.__onQmlWarning [442]: file:///Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/qml/Menus/SettingsMenu.qml:22:9: QML Menu: Binding loop detected for property "width"
+2022-10-22 15:34:56,376 - WARNING - [MainThread] UM.Qt.QtApplication.__onQmlWarning [442]: file:///Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/qml/Menus/SettingsMenu.qml:22:9: QML Menu: Binding loop detected for property "width"
+2022-10-22 15:34:56,438 - DEBUG - [MainThread] CustomJobPrefix.CustomJobPrefix._createAdditionalComponentsView [49]: Creating additional ui components for CustomJobPrefix
+2022-10-22 15:34:56,446 - DEBUG - [MainThread] OctoPrintPlugin.DiscoverOctoPrintAction._createAdditionalComponentsView [539]: Creating additional ui components for OctoPrint-connected printers.
+2022-10-22 15:34:56,461 - DEBUG - [MainThread] MaterialSettingsPlugin.MaterialSettingsPlugin._onEngineCreated [79]: Replacing Materials preferencepane with patched version
+2022-10-22 15:34:56,466 - DEBUG - [MainThread] UM.Controller.setActiveStage [180]: Setting active stage to PrepareStage
+2022-10-22 15:34:56,517 - DEBUG - [MainThread] cura.Machines.Models.NozzleModel._update [28]: Updating NozzleModel.
+2022-10-22 15:34:56,735 - DEBUG - [MainThread] UM.Controller.setActiveView [108]: Setting active view to SolidView
+2022-10-22 15:34:56,747 - DEBUG - [MainThread] SliceInfoPlugin.SliceInfo._createDialog [76]: Creating dialog [MoreInfoWindow.qml]
+2022-10-22 15:34:56,771 - DEBUG - [MainThread] ModelChecker.ModelChecker._createView [118]: Creating model checker view.
+2022-10-22 15:34:56,774 - DEBUG - [MainThread] ModelChecker.ModelChecker._createView [127]: Model checker view created.
+2022-10-22 15:34:56,848 - DEBUG - [MainThread] cura.CuraApplication.run [874]: Booting Cura took 8.162180185317993 seconds
+2022-10-22 15:34:56,851 - DEBUG - [JobQueueWorker [2]] cura.Machines.ContainerTree.run [174]: Started background loading of MachineNodes
+2022-10-22 15:34:56,864 - DEBUG - [MainThread] OctoPrintPlugin.OctoPrintOutputDevice.parseSettingsData [1710]: Instance needs time after uploading to analyse gcode
+2022-10-22 15:34:56,875 - DEBUG - [MainThread] cura.Machines.Models.IntentSelectionModel._update [91]: Updating IntentSelectionModel.
+2022-10-22 15:34:56,913 - DEBUG - [MainThread] cura.Machines.Models.CustomQualityProfilesDropDownMenuModel._update [33]: Updating CustomQualityProfilesDropDownMenuModel.
+2022-10-22 15:34:57,871 - DEBUG - [JobQueueWorker [2]] cura.Machines.ContainerTree.run [185]: All MachineNode loading completed
+2022-10-22 15:34:59,650 - DEBUG - [MainThread] UM.Qt.QtRenderer._initialize [211]: Support for Vertex Array Objects: True
+2022-10-22 15:34:59,703 - DEBUG - [MainThread] UM.View.GL.OpenGL.__init__ [121]: Initialized OpenGL subsystems.
+2022-10-22 15:34:59,703 - DEBUG - [MainThread] UM.View.GL.OpenGL.__init__ [122]: OpenGL Version:  4.1 INTEL-18.8.5
+2022-10-22 15:34:59,703 - DEBUG - [MainThread] UM.View.GL.OpenGL.__init__ [123]: OpenGL Vendor:   Intel Inc.
+2022-10-22 15:34:59,703 - DEBUG - [MainThread] UM.View.GL.OpenGL.__init__ [124]: OpenGL Renderer: Intel(R) Iris(TM) Plus Graphics 655
+2022-10-22 15:34:59,705 - DEBUG - [MainThread] UM.View.GL.OpenGL.__init__ [125]: GLSL Version:    4.10.0
+2022-10-22 15:34:59,707 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/uranium/resources/shaders/default.shader]...
+2022-10-22 15:34:59,713 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/uranium/resources/shaders/selection.shader]...
+2022-10-22 15:34:59,717 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/uranium/resources/shaders/select_face.shader]...
+2022-10-22 15:34:59,721 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/uranium/resources/shaders/default.shader]...
+2022-10-22 15:34:59,724 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/uranium/resources/shaders/composite.shader]...
+2022-10-22 15:34:59,729 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/shaders/overhang.shader]...
+2022-10-22 15:34:59,735 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/shaders/striped.shader]...
+2022-10-22 15:34:59,741 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/shaders/transparent_object.shader]...
+2022-10-22 15:34:59,746 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/shaders/striped.shader]...
+2022-10-22 15:34:59,751 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/shaders/xray.shader]...
+2022-10-22 15:34:59,755 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/shaders/xray_composite.shader]...
+2022-10-22 15:34:59,760 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/uranium/resources/shaders/default.shader]...
+2022-10-22 15:34:59,764 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/shaders/grid.shader]...
+2022-10-22 15:34:59,768 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/uranium/resources/shaders/platform.shader]...
+2022-10-22 15:34:59,813 - DEBUG - [MainThread] UM.View.GL.ShaderProgram.load [61]: Loading [/Applications/Ultimaker-Cura.app/Contents/MacOS/share/cura/resources/shaders/xray.shader]...
+2022-10-22 15:35:00,026 - DEBUG - [MainThread] cura.Machines.Models.IntentSelectionModel._update [91]: Updating IntentSelectionModel.
+2022-10-22 15:35:00,030 - DEBUG - [MainThread] cura.Machines.Models.IntentSelectionModel._update [91]: Updating IntentSelectionModel.
+2022-10-22 15:35:00,072 - DEBUG - [MainThread] cura.Machines.Models.IntentSelectionModel._update [91]: Updating IntentSelectionModel.
+2022-10-22 15:35:01,546 - DEBUG - [MainThread] cura.Machines.Models.CustomQualityProfilesDropDownMenuModel._update [33]: Updating CustomQualityProfilesDropDownMenuModel.
+2022-10-22 15:35:02,523 - INFO - [JobQueueWorker [1]] SettingsGuide2.CuraSettingsGuide.load_all [179]: Finished loading Settings Guide articles.
+2022-10-22 15:35:10,063 - DEBUG - [MainThread] cura.AutoSave._onTimeout [64]: Autosaving preferences, instances and profiles took 0.06968998908996582 seconds

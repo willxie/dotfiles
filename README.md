@@ -13,11 +13,13 @@ OS specific options can be appended to the above line. E.g.:
 ```
 
 MacOS example:
+
 ```
-./install.sh gitconfig profile spacemacs tmux vim zsh
+./install.sh gitconfig profile spacemacs tmux vim zsh cura
 ```
 
 Ubuntu example:
+
 ```
 ./install.sh zsh vim ubuntu_ros_bash tmux spacemacs profile i3
 ```
