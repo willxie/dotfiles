@@ -59,6 +59,8 @@ alias zshrc='source ~/.zshrc'
 # Colored list directory
 alias grep='grep --color=auto'
 
+alias rsync='rsync -varP'
+
 # Mkdir and then cd to it
 mkdircd ()
 {
