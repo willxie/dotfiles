@@ -32,9 +32,9 @@ for MODULE in $MODULES; do
     fi
 
     # Copy back up files and copy
-    for FILE in *; do
+    for FILE in * .[^.]*; do # Include all hidden and non-hidden files
         # Skip Mac non-sense
-        if [ $FILE = ".DS_Store" ] || [ $FILE = "." ] || [ $FILE = ".." ] || [ $FILE = "*" ]; then
+        if [ $FILE = ".DS_Store" ] || [ $FILE = "." ] || [ $FILE = ".." ] || [ $FILE = "*" ] || [ $FILE = ".[^.]*" ]; then
             continue
         fi
         # Back up old file
@@ -42,9 +42,7 @@ for MODULE in $MODULES; do
             echo "Moving any old dot files $FILE..."
             mv $DEST_DIR/$FILE $OLD_DOT_DIR
         fi
-        echo "Creating symlink to $MODULE in ${DEST_DIR}/"
-        echo "$DOT_DIR/$MODULE/$FILE"
-        echo "${DEST_DIR}/$FILE"
+        echo " ====== Creating symlink to ${MODULE}/${FILE} in ${DEST_DIR}/"
         ln -s "$DOT_DIR/$MODULE/$FILE" "$DEST_DIR/$FILE"
     done
 done
