@@ -13,6 +13,12 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Do OS specific things
+if [[ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') == "microsoft" ]]; then
+    # Windows WSL2, also run scripts in linux.
+    alias open="explorer.exe"
+    alias wsl-open="explorer.exe"
+fi
+
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux
     # Emacsclient and disown
