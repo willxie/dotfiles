@@ -54,6 +54,7 @@ alias py='python'
 alias py2='python2'
 alias py3='python3'
 alias zshrc='source ~/.zshrc'
+alias nproc="sysctl -n hw.logicalcpu"
 
 
 # Colored list directory
@@ -71,12 +72,10 @@ mkdircd ()
 ag-replace() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
 
 export PATH="$PATH:/usr/local/anaconda3/bin"
-
-# G stuff
-alias fu=fileutil
-if [ -f "/etc/bash_completion.d/hgd" ]; then
-  source /etc/bash_completion.d/hgd
-fi
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
 
 # Koen's docker rviz
 if  type xhost > /dev/null; then

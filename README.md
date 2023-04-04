@@ -15,7 +15,7 @@ OS specific options can be appended to the above line. E.g.:
 MacOS example:
 
 ```
-./install.sh gitconfig profile spacemacs tmux vim zsh cura
+./install.sh gitconfig profile spacemacs tmux vim zsh cura p10k
 ```
 
 Ubuntu example:
