@@ -60,8 +60,8 @@ alias py='python'
 alias py2='python2'
 alias py3='python3'
 alias zshrc='source ~/.zshrc'
-alias nproc="sysctl -n hw.logicalcpu"
 alias googly='cd ~/projects/googly_app &&  source venv/bin/activate'
+# alias nproc="sysctl -n hw.logicalcpu"
 
 
 # Colored list directory
@@ -82,7 +82,7 @@ export PATH="$PATH:/usr/local/anaconda3/bin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
-export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
+# export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
 
 # Koen's docker rviz
 # if  type xhost > /dev/null; then
