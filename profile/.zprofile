@@ -61,6 +61,7 @@ alias py2='python2'
 alias py3='python3'
 alias zshrc='source ~/.zshrc'
 alias nproc="sysctl -n hw.logicalcpu"
+alias googly='cd ~/projects/googly_app &&  source venv/bin/activate'
 
 
 # Colored list directory
@@ -84,10 +85,10 @@ export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
 
 # Koen's docker rviz
-if  type xhost > /dev/null; then
-    xhost +local:docker > /dev/null
-    DOCKER_COMMON_ARGS="--gpus all --env=DISPLAY --env=XDG_RUNTIME_DIR --env=QT_X11_NO_MITSHM=1 --device=/dev/dri:/dev/dri -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /etc/localtime:/etc/localtime:ro"
-fi
+# if  type xhost > /dev/null; then
+#     xhost +local:docker > /dev/null
+#     DOCKER_COMMON_ARGS="--gpus all --env=DISPLAY --env=XDG_RUNTIME_DIR --env=QT_X11_NO_MITSHM=1 --device=/dev/dri:/dev/dri -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /etc/localtime:/etc/localtime:ro"
+# fi
 
 # Import API tokens
 if [[ -f ~/.secrets ]]; then
