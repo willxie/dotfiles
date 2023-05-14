@@ -60,9 +60,11 @@ alias py='python'
 alias py2='python2'
 alias py3='python3'
 alias zshrc='source ~/.zshrc'
-alias googly='cd ~/projects/googly_app &&  source venv/bin/activate'
+alias cosign='cd ~/projects/cosign/api &&  source venv/bin/activate && cd ..'
 # alias nproc="sysctl -n hw.logicalcpu"
 
+# The fuck cli
+eval $(thefuck --alias)
 
 # Colored list directory
 alias grep='grep --color=auto'
@@ -94,3 +96,8 @@ export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 if [[ -f ~/.secrets ]]; then
     . ~/.secrets
 fi
+
+# Setting PATH for Python 2.7
+# The original version is saved in .zprofile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
