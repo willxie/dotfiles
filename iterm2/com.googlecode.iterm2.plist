@@ -1389,6 +1389,6 @@
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 	<key>preferIntegratedGPU</key>
-	<false/>
+	<true/>
 </dict>
 </plist>
