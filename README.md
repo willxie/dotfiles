@@ -17,6 +17,10 @@ MacOS example:
 ```
 ./install.sh gitconfig profile spacemacs tmux vim zsh cura p10k
 ```
+```
+# vscode
+ln -s  ~/dotfiles/vscode/settings.json settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+```
 
 Ubuntu example:
 
