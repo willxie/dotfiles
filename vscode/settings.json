@@ -1,0 +1,14 @@
+{
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "editor.lineNumbers": "relative",
+    "vim.useSystemClipboard": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.openRepositoryInParentFolders": "always",
+    "editor.inlineSuggest.enabled": true,
+    "window.zoomLevel": 1,
+    "python.defaultInterpreterPath": "/Users/wxie/projects/cosign/api/venv",
+    "python.analysis.refactoring.allowMovingSymbols": true,
+}

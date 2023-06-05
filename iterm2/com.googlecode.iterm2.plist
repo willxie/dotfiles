@@ -1370,6 +1370,19 @@
 	<true/>
 	<key>SmartPlacement</key>
 	<false/>
+	<key>Snippets</key>
+	<array>
+		<dict>
+			<key>guid</key>
+			<string>3583848F-5692-4878-9242-A7CD541516FA</string>
+			<key>title</key>
+			<string>refactor-0524-timing.</string>
+			<key>value</key>
+			<string>refactor-0524-timing.</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyle</key>
