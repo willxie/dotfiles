@@ -65,6 +65,7 @@ alias cosign='cd ~/projects/cosign/api &&  source venv/bin/activate && cd ..'
 
 # The fuck cli
 eval $(thefuck --alias)
+export THEFUCK_EXCLUDED_SEARCH_PATH_PREFIXES='/mnt/'
 
 # Colored list directory
 alias grep='grep --color=auto'
@@ -80,11 +81,15 @@ mkdircd ()
 
 ag-replace() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
 
-export PATH="$PATH:/usr/local/anaconda3/bin"
+# export PATH="$PATH:/usr/local/anaconda3/bin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 # export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Koen's docker rviz
 # if  type xhost > /dev/null; then
