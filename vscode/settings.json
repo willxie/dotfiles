@@ -8,7 +8,19 @@
     "security.workspace.trust.untrustedFiles": "open",
     "git.openRepositoryInParentFolders": "always",
     "editor.inlineSuggest.enabled": true,
-    "window.zoomLevel": 1,
     "python.defaultInterpreterPath": "/Users/wxie/projects/cosign/api/venv",
     "python.analysis.refactoring.allowMovingSymbols": true,
+    "window.zoomLevel": 1,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
 }

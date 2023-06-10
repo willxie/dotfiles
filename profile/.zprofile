@@ -63,6 +63,16 @@ alias zshrc='source ~/.zshrc'
 alias cosign='cd ~/projects/cosign/api &&  source venv/bin/activate && cd ..'
 # alias nproc="sysctl -n hw.logicalcpu"
 
+# Google cloud  shortcuts
+alias gls='gsutil -m ls'
+alias gll='gsutil -m ls'
+alias grm='gsutil -m rm'
+alias gmv='gsutil -m mv'
+alias gcp='gsutil -m  cp'
+alias gcat='gsutil -m cat'
+alias grsync='gsutil -m rsync'
+alias gdu='gsutil -m du -sch'
+
 # The fuck cli
 eval $(thefuck --alias)
 
@@ -84,6 +94,7 @@ export PATH="$PATH:/usr/local/anaconda3/bin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/"
 # export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
 
 # Koen's docker rviz
