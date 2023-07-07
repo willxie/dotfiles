@@ -10,7 +10,6 @@
     "editor.inlineSuggest.enabled": true,
     "python.defaultInterpreterPath": "/Users/wxie/projects/cosign/api/venv",
     "python.analysis.refactoring.allowMovingSymbols": true,
-    "window.zoomLevel": 1,
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
@@ -23,4 +22,8 @@
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": false
     },
+    "cmake.configureOnOpen": true,
+    "dart.debugExternalPackageLibraries": true,
+    "dart.debugSdkLibraries": false,
+    "window.zoomLevel": 1,
 }

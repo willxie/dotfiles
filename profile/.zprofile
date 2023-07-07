@@ -93,10 +93,12 @@ ag-replace() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
 
 # export PATH="$PATH:/usr/local/anaconda3/bin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
-export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/"
+export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/" # MacTex
+export PATH="$PATH":"$HOME/.pub-cache/bin" # Flutter
 # export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -117,3 +119,7 @@ fi
 # The original version is saved in .zprofile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
+
+
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
