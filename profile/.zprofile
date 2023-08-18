@@ -35,6 +35,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
     # Homebrew
     alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+
+    # Gcloud SDK
+    source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+    source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 else
     echo "OS type unknown, shell setup could be bad"
 fi
@@ -64,6 +68,16 @@ alias cosign='cd ~/projects/cosign/api_history_taking &&  source venv/bin/activa
 jupyter-lab-wsl() { jupyter-lab --ip $(python3 -c "import subprocess; subprocess.run(['hostname', '-I'], text=True).stdout") }
 # alias nproc="sysctl -n hw.logicalcpu"
 
+# Google cloud  shortcuts
+alias gls='gsutil -m ls'
+alias gll='gsutil -m ls'
+alias grm='gsutil -m rm'
+alias gmv='gsutil -m mv'
+alias gcp='gsutil -m  cp'
+alias gcat='gsutil -m cat'
+alias grsync='gsutil -m rsync'
+alias gdu='gsutil -m du -sch'
+
 # The fuck cli
 eval $(thefuck --alias)
 export THEFUCK_EXCLUDED_SEARCH_PATH_PREFIXES='/mnt/'
@@ -91,7 +105,9 @@ export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 # Flutter and dart
 export PATH="$PATH:/usr/local/flutter/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/" # MacTex
 # export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -112,3 +128,5 @@ fi
 # The original version is saved in .zprofile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
+
+
