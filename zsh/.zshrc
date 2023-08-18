@@ -1,3 +1,6 @@
+# for non-interactive sessions stop execution here -- https://serverfault.com/a/805532/67528
+[[ $- != *i* ]] && return
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.

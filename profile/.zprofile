@@ -60,7 +60,8 @@ alias py='python'
 alias py2='python2'
 alias py3='python3'
 alias zshrc='source ~/.zshrc'
-alias cosign='cd ~/projects/cosign/api &&  source venv/bin/activate && cd ..'
+alias cosign='cd ~/projects/cosign/api_history_taking &&  source venv/bin/activate && cd ..'
+jupyter-lab-wsl() { jupyter-lab --ip $(python3 -c "import subprocess; subprocess.run(['hostname', '-I'], text=True).stdout") }
 # alias nproc="sysctl -n hw.logicalcpu"
 
 # The fuck cli
@@ -79,12 +80,17 @@ mkdircd ()
         cd -P -- "$1"
 }
 
-ag-replace() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
+ag-replace() { ag -0 -l $1 | xargs -0 sed -ri.bak -e "s/$1/$2/g"; }
+ag-replace-dry() { ag -0 -l $1 | xargs -0 sed -n -ri.bak -e "s/$1/$2/g"; }
+ag-replace-pearl() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
 
 # export PATH="$PATH:/usr/local/anaconda3/bin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+# Flutter and dart
+export PATH="$PATH:/usr/local/flutter/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 # export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
 
 export NVM_DIR="$HOME/.nvm"
