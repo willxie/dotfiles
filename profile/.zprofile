@@ -86,6 +86,9 @@ export THEFUCK_EXCLUDED_SEARCH_PATH_PREFIXES='/mnt/'
 alias grep='grep --color=auto'
 
 alias rsync='rsync -varP'
+alias rsync-partial='rsync -hvrPt'
+
+alias f='fuck'
 
 # Mkdir and then cd to it
 mkdircd ()
