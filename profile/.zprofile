@@ -12,6 +12,9 @@ if [ -n "$BASH_VERSION" ]; then
    exit 1
 fi
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+
 # Do OS specific things
 if [[ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') == "microsoft" ]]; then
     # Windows WSL2, also run scripts in linux.
@@ -43,6 +46,12 @@ else
     echo "OS type unknown, shell setup could be bad"
 fi
 
+
+
+
+# Enable inline comment
+setopt interactive_comments
+
 # More colors
 export TERM="xterm-256color"
 
@@ -64,11 +73,15 @@ alias py='python'
 alias py2='python2'
 alias py3='python3'
 alias zshrc='source ~/.zshrc'
+alias git-branch-dates="git for-each-ref --sort=committerdate --format='%(refname:short) %(committerdate:iso8601)' refs/heads/ | awk '{ printf \"%-50s %s\n\", \$1, \$2 \" \" \$3 \" \" \$4 }'"
 alias cosign='cd ~/projects/cosign/api_history_taking &&  source venv/bin/activate && cd ..'
+alias cosignapp='cd ~/projects/cosign/api_history_taking &&  source venv/bin/activate && cd ../app_history'
+alias cosignapi='cd ~/projects/cosign/api_history_taking &&  source venv/bin/activate && cd ../api_history_taking'
+
 jupyter-lab-wsl() { jupyter-lab --ip $(python3 -c "import subprocess; subprocess.run(['hostname', '-I'], text=True).stdout") }
 # alias nproc="sysctl -n hw.logicalcpu"
 
-# Google cloud  shortcuts
+# Google cloud shortcuts
 alias gls='gsutil -m ls'
 alias gll='gsutil -m ls'
 alias grm='gsutil -m rm'
@@ -112,24 +125,9 @@ export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/" # MacTex
 # export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export PATH="$HOME/.daml/bin:$PATH"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Koen's docker rviz
-# if  type xhost > /dev/null; then
-#     xhost +local:docker > /dev/null
-#     DOCKER_COMMON_ARGS="--gpus all --env=DISPLAY --env=XDG_RUNTIME_DIR --env=QT_X11_NO_MITSHM=1 --device=/dev/dri:/dev/dri -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /etc/localtime:/etc/localtime:ro"
-# fi
-
-# Import API tokens
-if [[ -f ~/.secrets ]]; then
-    . ~/.secrets
-fi
-
-# Setting PATH for Python 2.7
-# The original version is saved in .zprofile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
-
-
