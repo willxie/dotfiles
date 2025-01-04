@@ -125,6 +125,14 @@ export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/" # MacTex
 # export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
+# Ruby, gem, cocoapod
+# export GEM_HOME=$HOME/.gem
+# export PATH=$GEM_HOME/bin:$PATH
+# export PATH=$HOME/.gem/bin:$PATH
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+
+
 export JAVA_HOME="$(/usr/libexec/java_home)"
 export PATH="$HOME/.daml/bin:$PATH"
 
