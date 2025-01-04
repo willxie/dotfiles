@@ -17,9 +17,8 @@ if [[ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') == "microsoft" ]]; th
     # Windows WSL2, also run scripts in linux.
     alias open="explorer.exe"
     alias wsl-open="explorer.exe"
-fi
-
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    CHROME_EXECUTABLE="/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux
     # Emacsclient and disown
     function ec() { emacsclient "$@" &! }
