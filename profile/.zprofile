@@ -12,9 +12,6 @@ if [ -n "$BASH_VERSION" ]; then
    exit 1
 fi
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-
 # Do OS specific things
 if [[ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') == "microsoft" ]]; then
     # Windows WSL2, also run scripts in linux.
@@ -25,7 +22,6 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux
     # Emacsclient and disown
     function ec() { emacsclient "$@" &! }
-
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OSX
     alias emacs='open -a /Applications/Emacs.app $1'
@@ -41,12 +37,12 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Gcloud SDK
     source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
     source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
+    export JAVA_HOME="$(/usr/libexec/java_home)"
 else
     echo "OS type unknown, shell setup could be bad"
 fi
-
-
-
 
 # Enable inline comment
 setopt interactive_comments
@@ -113,15 +109,12 @@ ag-replace() { ag -0 -l $1 | xargs -0 sed -ri.bak -e "s/$1/$2/g"; }
 ag-replace-dry() { ag -0 -l $1 | xargs -0 sed -n -ri.bak -e "s/$1/$2/g"; }
 ag-replace-pearl() { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g"; }
 
-# export PATH="$PATH:/usr/local/anaconda3/bin"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-# export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 # Flutter and dart
 export PATH="$PATH:/usr/local/flutter/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/" # MacTex
-# export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc)
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # Ruby, gem, cocoapod
@@ -130,9 +123,6 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 # export PATH=$HOME/.gem/bin:$PATH
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
-
-
-export JAVA_HOME="$(/usr/libexec/java_home)"
 export PATH="$HOME/.daml/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
