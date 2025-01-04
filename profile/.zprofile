@@ -32,12 +32,12 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # alias g+++='/usr/local/bin/g++-6 -std=c++11 -Werror -Wall -Wextra'
 
     # Homebrew
+    eval "$(/opt/homebrew/bin/brew shellenv)"
     alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
     # Gcloud SDK
     source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
     source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
 
     export JAVA_HOME="$(/usr/libexec/java_home)"
 else
