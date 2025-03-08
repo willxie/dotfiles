@@ -87,8 +87,10 @@ alias grsync='gsutil -m rsync'
 alias gdu='gsutil -m du -sch'
 
 # The fuck cli
-eval $(thefuck --alias)
-export THEFUCK_EXCLUDED_SEARCH_PATH_PREFIXES='/mnt/'
+if command -v thefuck &> /dev/null; then
+    eval $(thefuck --alias)
+    export THEFUCK_EXCLUDED_SEARCH_PATH_PREFIXES='/mnt/'
+fi
 
 # Colored list directory
 alias grep='grep --color=auto'
