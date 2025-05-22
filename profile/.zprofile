@@ -32,12 +32,14 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # alias g+++='/usr/local/bin/g++-6 -std=c++11 -Werror -Wall -Wextra'
 
     # Homebrew
+    export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
     eval "$(/opt/homebrew/bin/brew shellenv)"
     alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
     # Gcloud SDK
-    source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-    source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+    export BREW_PREFIX=$(brew --prefix)
+    source "$BREW_PREFIX/share/google-cloud-sdk/path.zsh.inc"
+    source "$BREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
 
     export JAVA_HOME="$(/usr/libexec/java_home)"
 else
@@ -123,10 +125,37 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 # export GEM_HOME=$HOME/.gem
 # export PATH=$GEM_HOME/bin:$PATH
 # export PATH=$HOME/.gem/bin:$PATH
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
 
 export PATH="$HOME/.daml/bin:$PATH"
 
+# Replace your existing NVM loading code with this lazy-loading approach
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Defer initialization of nvm until nvm, node or a node-dependent command is run
+nvm() {
+  unset -f nvm node npm npx yarn
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm "$@"
+}
+node() {
+  unset -f nvm node npm npx yarn
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  node "$@"
+}
+npm() {
+  unset -f nvm node npm npx yarn
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  npm "$@"
+}
+npx() {
+  unset -f nvm node npm npx yarn
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  npx "$@"
+}
+yarn() {
+  unset -f nvm node npm npx yarn
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  yarn "$@"
+}
+
+
