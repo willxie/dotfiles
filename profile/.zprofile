@@ -34,7 +34,19 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Homebrew
     export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
     eval "$(/opt/homebrew/bin/brew shellenv)"
-    alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+    brewup() {
+        if [[ "$1" == "--cask" ]]; then
+            brew update
+            brew upgrade --greedy
+            brew cleanup
+            brew doctor
+        else
+            brew update
+            brew upgrade
+            brew cleanup
+            brew doctor
+        fi
+    }
 
     # Gcloud SDK
     export BREW_PREFIX=$(brew --prefix)
@@ -132,30 +144,30 @@ export PATH="$HOME/.daml/bin:$PATH"
 # Replace your existing NVM loading code with this lazy-loading approach
 export NVM_DIR="$HOME/.nvm"
 # Defer initialization of nvm until nvm, node or a node-dependent command is run
-nvm() {
-  unset -f nvm node npm npx yarn
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  nvm "$@"
-}
-node() {
-  unset -f nvm node npm npx yarn
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  node "$@"
-}
-npm() {
-  unset -f nvm node npm npx yarn
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  npm "$@"
-}
-npx() {
-  unset -f nvm node npm npx yarn
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  npx "$@"
-}
-yarn() {
-  unset -f nvm node npm npx yarn
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  yarn "$@"
-}
+# nvm() {
+#   unset -f nvm node npm npx yarn
+#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#   nvm "$@"
+# }
+# node() {
+#   unset -f nvm node npm npx yarn
+#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#   node "$@"
+# }
+# npm() {
+#   unset -f nvm node npm npx yarn
+#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#   npm "$@"
+# }
+# npx() {
+#   unset -f nvm node npm npx yarn
+#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#   npx "$@"
+# }
+# yarn() {
+#   unset -f nvm node npm npx yarn
+#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+#   yarn "$@"
+# }
 
 
