@@ -1,3 +1,4 @@
+
 # for non-interactive sessions stop execution here -- https://serverfault.com/a/805532/67528
 [[ $- != *i* ]] && return
 
@@ -11,11 +12,8 @@ fi
 
 # Fast compinit
 autoload -Uz compinit
-if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
-  compinit
-else
-  compinit -C
-fi
+zstyle ':completion:*' rehash true
+compinit -C
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -126,6 +124,3 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 # fpath[1,0]=~/.zsh/completion/
 # zstyle ':completion:*' use-cache on
 # zstyle ':completion:*' cache-path ~/.zsh/cache
-
-# Shell invariant settings
-# source ~/.zprofile
