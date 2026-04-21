@@ -95,7 +95,8 @@ alias gls='gsutil -m ls'
 alias gll='gsutil -m ls'
 alias grm='gsutil -m rm'
 alias gmv='gsutil -m mv'
-alias gcp='gsutil -m  cp'
+alias gcp='gsutil -m cp'
+alias gcp2='gsutil -m cp'
 alias gcat='gsutil -m cat'
 alias grsync='gsutil -m rsync'
 alias gdu='gsutil -m du -sch'
@@ -109,8 +110,8 @@ fi
 # Colored list directory
 alias grep='grep --color=auto'
 
-alias rsync='rsync -varP'
-alias rsync-partial='rsync -hvrPt'
+alias rsync-safe='rsync -avhP --stats --itemize-changes'
+alias rsync-mirror='rsync -avhP --delete --stats --itemize-changes'
 
 alias f='fuck'
 

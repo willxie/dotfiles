@@ -124,3 +124,6 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 # fpath[1,0]=~/.zsh/completion/
 # zstyle ':completion:*' use-cache on
 # zstyle ':completion:*' cache-path ~/.zsh/cache
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
