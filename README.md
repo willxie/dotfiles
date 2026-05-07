@@ -15,8 +15,9 @@ OS specific options can be appended to the above line. E.g.:
 MacOS example:
 
 ```
-./install.sh gitconfig profile spacemacs tmux vim zsh cura p10k
+./install.sh gitconfig profile  tmux vim zsh spacemacs
 ```
+
 ```
 # vscode
 ln -s  ~/dotfiles/vscode/settings.json settings.json $HOME/Library/Application\ Support/Code/User/settings.json
@@ -25,5 +26,5 @@ ln -s  ~/dotfiles/vscode/settings.json settings.json $HOME/Library/Application\ 
 Ubuntu example:
 
 ```
-./install.sh zsh vim ubuntu_ros_bash tmux spacemacs profile i3
+./install.sh zsh vim tmux profile
 ```

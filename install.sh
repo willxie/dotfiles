@@ -31,6 +31,24 @@ for MODULE in $MODULES; do
         DEST_DIR="${HOME_DIR}/Library/Application Support"
     fi
 
+    # zsh: install Oh My Zsh, plugins, and themes
+    if [ $MODULE == "zsh" ]; then
+        echo "Installing Oh My Zsh..."
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+        echo "Creating Oh My Zsh custom directories..."
+        mkdir -p "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins"
+        mkdir -p "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes"
+
+        echo "Installing git-open plugin..."
+        git clone https://github.com/paulirish/git-open.git \
+          "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/git-open"
+
+        echo "Installing Powerlevel10k theme..."
+        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
+          "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+    fi
+
     # Copy back up files and copy
     for FILE in * .[^.]*; do # Include all hidden and non-hidden files
         # Skip Mac non-sense
