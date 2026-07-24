@@ -90,16 +90,34 @@ alias cosignapi='cd ~/projects/cosign/api_history_taking &&  source venv/bin/act
 jupyter-lab-wsl() { jupyter-lab --ip $(python3 -c "import subprocess; subprocess.run(['hostname', '-I'], text=True).stdout") }
 # alias nproc="sysctl -n hw.logicalcpu"
 
-# Google cloud shortcuts
-alias gls='gsutil -m ls'
-alias gll='gsutil -m ls'
-alias grm='gsutil -m rm'
-alias gmv='gsutil -m mv'
-alias gcp='gsutil -m cp'
-alias gcp2='gsutil -m cp'
-alias gcat='gsutil -m cat'
-alias grsync='gsutil -m rsync'
-alias gdu='gsutil -m du -sch'
+# ==========================================
+# Google Cloud Storage Aliases
+# ==========================================
+
+# --- Basic File Operations ---
+alias gls='gcloud storage ls'
+alias gll='gcloud storage ls -l'            # Formatted list with sizes and timestamps
+alias glll='gcloud storage ls -L'           # Exhaustive detailed metadata list
+alias gcp='gcloud storage cp'
+alias gcp2='gcloud storage cp'              # Kept from your list (often used for specific flags)
+alias gmv='gcloud storage mv'
+alias grm='gcloud storage rm'
+alias grmr='gcloud storage rm --recursive'  # Recursive delete for folders/buckets
+alias gcat='gcloud storage cat'
+alias grsync='gcloud storage rsync'
+alias gdu='gcloud storage du --summarize --readable-sizes'
+
+# --- Bucket Management ---
+alias gmb='gcloud storage buckets create'   # "Make Bucket" (equivalent to old gsutil mb)
+alias grb='gcloud storage buckets delete'   # "Remove Bucket" (equivalent to old gsutil rb)
+
+# --- Object Metadata & Details ---
+alias gstat='gcloud storage objects list --stat' # "Stat" for object details (equivalent to old gsutil stat)
+alias gmeta='gcloud storage objects update'      # Update metadata (equivalent to old gsutil setmeta)
+
+# --- Utilities ---
+alias ghash='gcloud storage hash'           # Calculate local/cloud file hashes
+alias gsign='gcloud storage sign-url'       # Generate a signed, temporary access URL
 
 # The fuck cli
 if command -v thefuck &> /dev/null; then
