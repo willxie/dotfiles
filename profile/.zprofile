@@ -84,6 +84,10 @@ alias py3='python3'
 alias zshrc='source ~/.zshrc'
 alias git-branch-dates="git for-each-ref --sort=committerdate --format='%(refname:short) %(committerdate:iso8601)' refs/heads/ | awk '{ printf \"%-50s %s\n\", \$1, \$2 \" \" \$3 \" \" \$4 }'"
 alias cosign='cd ~/projects/cosign/api_history_taking &&  source venv/bin/activate && cd ..'
+alias cosign2='cd ~/projects/cosign2/api_history_taking &&  source venv/bin/activate && cd ..'
+alias cosign3='cd ~/projects/cosign3/api_history_taking &&  source venv/bin/activate && cd ..'
+alias cosign4='cd ~/projects/cosign4/api_history_taking &&  source venv/bin/activate && cd ..'
+alias cosign5='cd ~/projects/cosign5/api_history_taking &&  source venv/bin/activate && cd ..'
 alias cosignapp='cd ~/projects/cosign/api_history_taking &&  source venv/bin/activate && cd ../app_history'
 alias cosignapi='cd ~/projects/cosign/api_history_taking &&  source venv/bin/activate && cd ../api_history_taking'
 
@@ -132,6 +136,7 @@ alias rsync-safe='rsync -avhP --stats --itemize-changes'
 alias rsync-mirror='rsync -avhP --delete --stats --itemize-changes'
 
 alias f='fuck'
+alias git-diff-html="git diff | npx diff2html-cli -s side -i stdin"
 
 # Mkdir and then cd to it
 mkdircd ()
