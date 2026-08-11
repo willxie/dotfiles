@@ -88,6 +88,11 @@ alias cosign2='cd ~/projects/cosign2/api_history_taking &&  source venv/bin/acti
 alias cosign3='cd ~/projects/cosign3/api_history_taking &&  source venv/bin/activate && cd ..'
 alias cosign4='cd ~/projects/cosign4/api_history_taking &&  source venv/bin/activate && cd ..'
 alias cosign5='cd ~/projects/cosign5/api_history_taking &&  source venv/bin/activate && cd ..'
+alias cosign6='cd ~/projects/cosign6/api_history_taking &&  source venv/bin/activate && cd ..'
+alias cosign7='cd ~/projects/cosign7/api_history_taking &&  source venv/bin/activate && cd ..'
+alias cosign8='cd ~/projects/cosign8/api_history_taking &&  source venv/bin/activate && cd ..'
+alias cosign9='cd ~/projects/cosign9/api_history_taking &&  source venv/bin/activate && cd ..'
+alias cosign10='cd ~/projects/cosign10/api_history_taking &&  source venv/bin/activate && cd ..'
 alias cosignapp='cd ~/projects/cosign/api_history_taking &&  source venv/bin/activate && cd ../app_history'
 alias cosignapi='cd ~/projects/cosign/api_history_taking &&  source venv/bin/activate && cd ../api_history_taking'
 
